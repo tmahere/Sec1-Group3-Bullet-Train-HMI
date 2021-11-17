@@ -129,6 +129,38 @@ namespace BulletTrainHMI
             }
 
         }
+
+        public class current
+        {
+            float Current;
+            public current()
+            {
+                Current = 0;
+            }
+            public float Get_Current()
+            {
+                try
+                {
+                    using (StreamReader FILE = new StreamReader(@"C:\Users\dom17\Desktop\PROJ3-Bullet-Train\tmahere\Sec1-Group3-Bullet-Train-HMI\BulletTrainHMI\current ratings.txt"))
+                    {
+                        Random rnd = new Random();
+                        int lineIndex = rnd.Next(1, File.ReadLines(@"C:\Users\dom17\Desktop\PROJ3-Bullet-Train\tmahere\Sec1-Group3-Bullet-Train-HMI\BulletTrainHMI\current ratings.txt").Count());
+                        for (int a = 1; a < lineIndex; a++)
+                        {
+                            FILE.ReadLine();
+                        }
+                        Current = float.Parse(FILE.ReadLine());
+                        return Current;
+                    }
+                }
+                catch
+                {
+                    Console.WriteLine("Unable to read voltage.");
+                    return Current = 0;
+                }
+            }
+
+        }
     }
-    
+
 }
