@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using System.IO;
 
 namespace BulletTrainHMI
 {
@@ -47,6 +48,86 @@ namespace BulletTrainHMI
                 pantograph_arm = false;
                 System.Console.WriteLine("System power shutdown completed.");
             }
+        }
+
+        public class voltage
+        {
+            float Voltage;
+            bool Voltage_Over;
+            bool Voltage_Under;
+            public voltage()
+            {
+                Voltage = 0;
+                Voltage_Over = false;
+                Voltage_Under = false;
+            }
+
+            public float Get_Voltage()
+            {
+                try
+                {
+                    using (StreamReader FILE = new StreamReader(@"C:\Users\dom17\Desktop\PROJ3-Bullet-Train\tmahere\Sec1-Group3-Bullet-Train-HMI\BulletTrainHMI\voltage ratings.txt"))
+                    {
+                        Random rnd = new Random();
+                        int lineIndex = rnd.Next(1, File.ReadLines(@"C:\Users\dom17\Desktop\PROJ3-Bullet-Train\tmahere\Sec1-Group3-Bullet-Train-HMI\BulletTrainHMI\voltage ratings.txt").Count());
+                        for(int a = 1; a < lineIndex; a++)
+                        {
+                            FILE.ReadLine();
+                        }
+                        Voltage = float.Parse(FILE.ReadLine());
+                        Voltage_Over = Over_Voltage(Voltage);
+                        Voltage_Under = Under_Voltage(Voltage);
+                        if((Voltage_Over == false) && (Voltage_Under == false))
+                        {
+                            return Voltage;
+                        }
+                        else
+                        {
+                            if (Voltage_Over == true)
+                            {
+                                Console.WriteLine("\tSystem Power Warning: OVERVOLTAGE, ");
+                                return Voltage;
+                            }
+                            else
+                            {
+                                Console.WriteLine("\tSystem Power Warning: UNDERVOLTAGE, ");
+                                return Voltage;
+                            }
+                        }
+
+                    }
+                }
+                catch 
+                {
+                    Console.WriteLine("Unable to read voltage.");
+                    return Voltage = 0;
+                }
+            }
+
+            public bool Under_Voltage(float VOLTAGE)
+            {
+                if (VOLTAGE < 17.5)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+            public bool Over_Voltage(float VOLTAGE)
+            {
+                if (VOLTAGE > 29)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
         }
     }
     
