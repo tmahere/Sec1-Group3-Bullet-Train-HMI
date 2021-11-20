@@ -8,12 +8,13 @@ namespace DrivingModule
 {
     public class SpeedChange : Driving
     {
-        string speedFile;
-        float currentSpeed;
-        float desiredSpeed;
-        float[] speedDisplay;
+        public string speedFile;
+        public float currentSpeed;
+        public float desiredSpeed;
+        public float[] speedDisplay;
+ 
 
-        SpeedChange()
+        public SpeedChange()
         {
             speedFile = @"C:\Users\Takunda Mahere\source\repos\Sec1-Group3-BulletTrain-HMI\SpeedChange";
             currentSpeed = 0.0f;
@@ -25,6 +26,10 @@ namespace DrivingModule
             speedDisplay[4] = 0.0f;
         }
 
-        
+
     }
+
+    
+
+    
 }

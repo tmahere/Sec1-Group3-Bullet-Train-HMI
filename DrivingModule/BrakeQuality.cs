@@ -8,17 +8,21 @@ namespace DrivingModule
 {
      public class BrakeQuality: Driving 
     {
-        private string qualityFile;
-        private string greenQuality;
-        private string yellowQuality;
-        private string redQuality;
+        public string qualityFile;
+        public string excellentQuality;
+        public string satisfactory;
+        public string requiresAttention;
 
-        BrakeQuality()
+         public BrakeQuality()
         {
             qualityFile = @"C:\Users\Takunda Mahere\source\repos\Sec1-Group3-BulletTrain-HMI\BrakeQuality";
-            greenQuality = "green";
-            yellowQuality = "yellow";
-            redQuality = "red";
+            excellentQuality = "Excellent";
+            satisfactory = "Satisfactory";
+            requiresAttention = "Requires Attention";
         }
+
+
+
+
     }
 }
