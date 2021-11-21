@@ -14,7 +14,8 @@ namespace ExternalMonitoring
     {
         private string GPSFile;
         private string nextStationFile;
-        private string nextStation;
+        private string nextStationLong;
+        private string nextStationLat;
         private string longitude;
         private string latitude;
 
@@ -24,7 +25,8 @@ namespace ExternalMonitoring
             nextStationFile = @"G:\Lisa\Documents\Bullet_Train_HMI\ExternalMonitoring\nextStationCoords.txt"; // change this later
             longitude = getLongitude();
             latitude = getLatitude();
-            nextStation = getNextStation();
+            nextStationLong = getNextStationLong();
+            nextStationLong = getNextStationLat();
         }
 
         private string getLongitude()// changed from prototype
@@ -64,15 +66,34 @@ namespace ExternalMonitoring
             }
         }
 
-        private string getNextStation()
+        private string getNextStationLong()
         {
             try
             {
                 using (StreamReader fp = new StreamReader(nextStationFile))
                 {
-                    String readNextStation = fp.ReadLine();
+                    String readNextStationLong = fp.ReadLine();
                     fp.Close();
-                    return readNextStation;
+                    return readNextStationLong;
+                }
+            }
+            catch (FileNotFoundException e)
+            {
+                Console.WriteLine("File not found.");
+                System.Environment.Exit(1);
+            }
+        }
+
+        private string getNextStationLat()
+        {
+            try
+            {
+                using (StreamReader fp = new StreamReader(nextStationFile))
+                {
+                    fp.ReadLine(); // skip first line
+                    String readNextStationLat = fp.ReadLine();
+                    fp.Close();
+                    return readNextStationLat;
                 }
             }
             catch (FileNotFoundException e)
