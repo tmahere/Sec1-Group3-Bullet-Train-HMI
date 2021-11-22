@@ -23,11 +23,6 @@ namespace BulletTrainHMI
         public void readData(int line)
         {
             currentTemp += float.Parse(File.ReadLines(filePath).Skip(line).Take(1).First());
-            /*StreamReader reader = new StreamReader(filePath);
-            for (int i = 0; i < line; i++)
-                reader.ReadLine();
-            currentTemp = float.Parse(reader.ReadLine());*/
-            //currentTemp = float.Parse(reader.ReadLine().Skip(line-1).Take(1).First());
         }
         public float getTemp()
         {
