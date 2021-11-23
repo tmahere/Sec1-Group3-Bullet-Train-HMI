@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace DrivingModule
 {
@@ -15,14 +16,13 @@ namespace DrivingModule
 
          public BrakeQuality()
         {
-            qualityFile = @"C:\Users\Takunda Mahere\source\repos\Sec1-Group3-BulletTrain-HMI\BrakeQuality";
+            qualityFile = @"C:\Desktop\BulletFiles\BrakeQualities.txt";
             excellentQuality = "Excellent";
             satisfactory = "Satisfactory";
             requiresAttention = "Requires Attention";
         }
 
-
-
+       
 
     }
 }

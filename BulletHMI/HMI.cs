@@ -13,16 +13,20 @@ namespace BulletHMI
         static void Main(string[] args)
         {
 
-            string trainDriveMode = "P";
-            string userInput = "R";
+            string trainDriveMode = "D";
+            string testFile = "";
          
-            DriveMode trainMode = new DriveMode();
-            SpeedChange trainSpeed = new SpeedChange();
-            BrakeQuality trainQuality = new BrakeQuality();
-            Brake trainBrake = new Brake(); // everytime you press brake button train slows down and you write to write file 
+            DriveMode trainDrive = new DriveMode();
+            // everytime you press brake button train slows down and you write to write file 
 
-            trainDriveMode = trainMode.getCurrentDrive();// coupled with read for display
-            trainMode.SetDriveMOde(userInput);// coupled with write for alteration 
+            trainDrive.setDriveMode(trainDriveMode);
+            testFile = trainDrive.getDriveMode();
+            Console.WriteLine(testFile);
+
+
+
+
+           
 
                
 

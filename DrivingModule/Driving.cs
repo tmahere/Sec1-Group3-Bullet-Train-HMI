@@ -7,28 +7,41 @@ namespace DrivingModule
     {
         public char userSelection;
 
-        protected string ReadFile(string filePath)
+        public void writeFile(string filePath, string storeContents)
         {
-            string driveLine;
-            driveLine= File.ReadAllText(filePath);
+            try
+            {
+                using (StreamWriter sw = new StreamWriter(filePath, append: true))
+                {
+                    sw.Write("," + storeContents);
+                    sw.Close();
+                }
 
-            string[] dataItems = {""};
-            string latestDriveItem = "";
-
-           
-           dataItems = driveLine.Split(',');
-           int datLength = dataItems.Length;
-           latestDriveItem= dataItems[datLength - 1];
-
-            return latestDriveItem;
-            
+            }
+            catch (FileNotFoundException e)
+            {
+                Console.WriteLine("Error: File Not Found");
+                System.Environment.Exit(1);
+            }
         }
-        protected void  WriteFile(string filePath, string driveInfo)
+
+        protected string readFile(string filePath, string placeContents)
         {
-            File.WriteAllText(filePath, "," + driveInfo);
+            try
+            {
+                using (StreamReader sr = new StreamReader(filePath))
+                {
+                    placeContents = sr.ReadLine();
+                    sr.Close();
+                    return placeContents;
+                }
+            }
+            catch (FileNotFoundException e)
+            {
+                Console.WriteLine("Error: File Not Found");
+                System.Environment.Exit(1);
+            }
+            return "";
         }
-    
-     
-      
     }
 }

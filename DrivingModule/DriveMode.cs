@@ -2,33 +2,47 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks; 
+using System.Threading.Tasks;
+using System.IO;
 
 namespace DrivingModule
 {
     public class DriveMode: Driving
     {
         private string driveFile;
-        //protected  string currentDriveMode;
+        private  string driveMode;
 
         public DriveMode()
         {
-            driveFile = @"C:\Users\Takunda Mahere\source\repos\Sec1-Group3-BulletTrain-HMI\DriveMode";
-           
-        }
-          
-        public string getCurrentDrive()
-        {
-            return ReadFile(driveFile);
+            driveMode = "P";
+            driveFile = @"C:\Desktop\BulletFiles\DriveModes.txt";
+
         }
 
-        public void SetDriveMOde(string requestedMode)
+        private void storeUserDrive(string userChoice)
         {
-            WriteFile(driveFile, requestedMode);
-        }
-        
+             string entireLine;
+             int lineLength;
 
-            
-  
+             writeFile(driveFile, userChoice);
+
+             entireLine = readFile(driveFile, driveMode);
+             lineLength = entireLine.Length;
+             lineLength--;
+
+             driveMode = entireLine[lineLength].ToString();
+               
+        }
+
+        public void setDriveMode(string userChoice)
+        {
+            storeUserDrive(userChoice);
+        }
+
+        public string getDriveMode()
+        {
+            return driveMode;
+        }
+       
     }
 }

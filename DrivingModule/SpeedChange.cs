@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,17 +9,18 @@ namespace DrivingModule
 {
     public class SpeedChange : Driving
     {
-        public string speedFile;
-        public float currentSpeed;
-        public float desiredSpeed;
-        public float[] speedDisplay;
  
+        public float currentSpeed;
+        public string speedChange;
+        public float [] speedDisplay;
+        private string speedFile;
+
 
         public SpeedChange()
         {
-            speedFile = @"C:\Users\Takunda Mahere\source\repos\Sec1-Group3-BulletTrain-HMI\SpeedChange";
+            speedFile = @"C:\Desktop\BulletFiles\SpeedChanges.txt";
             currentSpeed = 0.0f;
-            desiredSpeed = 0.0f;
+            speedChange = "none";
             speedDisplay[0] = 0.0f;
             speedDisplay[1] = 0.0f;
             speedDisplay[2] = 0.0f;
@@ -27,9 +29,10 @@ namespace DrivingModule
         }
 
 
+
     }
 
-    
 
-    
+
+
 }
