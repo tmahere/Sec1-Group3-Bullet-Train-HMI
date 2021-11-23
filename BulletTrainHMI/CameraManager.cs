@@ -39,7 +39,7 @@ namespace BulletTrainHMI
             lineData = File.ReadLines(filePath).Skip(line).Take(1).First().Split(' ');
             for (int i = 0; i < 5; i++)
             {
-                if (lineData[i] == "Closed" || lineData[i] == "Open")
+                if (lineData[i] == "ON" || lineData[i] == "OFF" || lineData[i] == "NO_SIGNAL")
                     cameraStates[i] = lineData[i];
             }
         }

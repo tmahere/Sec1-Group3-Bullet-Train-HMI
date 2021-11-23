@@ -39,7 +39,7 @@ namespace BulletTrainHMI
             lineData = File.ReadLines(filePath).Skip(line).Take(1).First().Split(' ');
             for (int i = 0; i < 5; i++)
             {
-                if (lineData[i] == "Closed" || lineData[i] == "Open")
+                if (lineData[i] == "NORMAL" || lineData[i] == "FIRE")
                     detectorStates[i] = lineData[i];
             }
         }

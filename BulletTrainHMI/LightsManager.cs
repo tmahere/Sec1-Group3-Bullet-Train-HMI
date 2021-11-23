@@ -39,7 +39,7 @@ namespace BulletTrainHMI
             lineData = File.ReadLines(filePath).Skip(line).Take(1).First().Split(' ');
             for (int i = 0; i < 5; i++)
             {
-                if (lineData[i] == "Closed" || lineData[i] == "Open")
+                if (lineData[i] == "ON" || lineData[i] == "OFF")
                     lightStates[i] = lineData[i];
             }
         }
@@ -65,7 +65,7 @@ namespace BulletTrainHMI
         /// </summary>
         /// <param name="status">status to set to</param>
         /// <param name="index">index of light to change</param>
-        public void setDoorStatus(string status, int index)
+        public void setLightStatus(string status, int index)
         {
             lightStates[index] = status;
         }

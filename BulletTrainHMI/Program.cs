@@ -40,8 +40,8 @@ namespace BulletTrainHMI
                 }
                 for (int j=0;j<5;j++)
                 {
-                    Console.Write("{0} ", doorManager.getData()[j]);
-                    if (doorManager.getData()[j] == "Open")
+                    Console.Write("{0} ", doorManager.getDoorStatus()[j]);
+                    if (doorManager.getDoorStatus()[j] == "Open")
                         doorManager.setDoorStatus("Closed", j);
                 }
                 Console.WriteLine("\n");

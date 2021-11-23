@@ -47,7 +47,7 @@ namespace BulletTrainHMI
         /// returns door status array
         /// </summary>
         /// <returns></returns>
-        public string[] getData()
+        public string[] getDoorStatus()
         {
             return doorStates;
         }

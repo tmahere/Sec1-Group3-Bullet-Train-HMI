@@ -39,7 +39,7 @@ namespace BulletTrainHMI
         /// returns current temperature
         /// </summary>
         /// <returns></returns>
-        public float getData()
+        public float getTemperature()
         {
             return currentTemp;
         }
