@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace BulletTrainHMI
 {
+    /// <summary>
+    /// interface class for the component managers
+    /// </summary>
     interface ComponentManager
     {
-        //void readData();
+        public void readData(int line);
+        public float getData();
+        public string[] getData();
     }
 }

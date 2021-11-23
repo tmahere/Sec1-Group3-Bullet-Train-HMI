@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace BulletTrainHMI
 {
+    /// <summary>
+    /// Manages all internal component managers
+    /// </summary>
     class InternalMonitor
     {
 
