@@ -23,12 +23,6 @@ namespace BulletTrainHMI
         {
             filePath = path;
             lightStates = File.ReadLines(filePath).Take(1).First().Split(' ');
-            Console.WriteLine("initialize: ");
-            foreach (string lightState in lightStates)
-            {
-                Console.WriteLine("{0} ", lightState);
-            }
-            Console.WriteLine("\n");
         }
         /// <summary>
         /// reads one line of data from file

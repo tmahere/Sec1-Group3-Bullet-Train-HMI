@@ -23,12 +23,6 @@ namespace BulletTrainHMI
         {
             filePath = path;
             cameraStates = File.ReadLines(filePath).Take(1).First().Split(' ');
-            Console.WriteLine("initialize: ");
-            foreach (string cameraState in cameraStates)
-            {
-                Console.WriteLine("{0} ", cameraState);
-            }
-            Console.WriteLine("\n");
         }
         /// <summary>
         /// reads one line of data from file

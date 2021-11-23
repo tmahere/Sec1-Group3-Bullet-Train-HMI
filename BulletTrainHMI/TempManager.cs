@@ -23,9 +23,8 @@ namespace BulletTrainHMI
         public TempManager(string path)
         {
             filePath = path;
-            //StreamReader reader = new StreamReader(filePath);
             currentTemp = float.Parse(File.ReadLines(filePath).Take(1).First());
-            Console.WriteLine("initialize: {0:F}\n",currentTemp);
+            destTemp = 26f;
         }
         /// <summary>
         /// reads one line of data from file

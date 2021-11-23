@@ -12,7 +12,5 @@ namespace BulletTrainHMI
     interface ComponentManager
     {
         public void readData(int line);
-        public float getData();
-        public string[] getData();
     }
 }

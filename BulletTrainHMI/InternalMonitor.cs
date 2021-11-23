@@ -13,7 +13,7 @@ namespace BulletTrainHMI
         public string[] doorData;
         public string[] lightsData;
         public string[] cameraData;
-        public string[] fireData;
+        public bool[] fireData;
     };
 
     /// <summary>

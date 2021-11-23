@@ -13,8 +13,7 @@ namespace BulletTrainHMI
     class FireManager:ComponentManager
     {
         string filePath;//path for detector data file
-        string[] detectorStates;//state of detectors
-        string[] lineData;//temporary buff
+        bool[] detectorStates;//state of detectors. True means fire detected
         /// <summary>
         /// constructs object with data file path. Initialize light states with first line in file
         /// </summary>
@@ -22,13 +21,7 @@ namespace BulletTrainHMI
         public FireManager(string path)
         {
             filePath = path;
-            detectorStates = File.ReadLines(filePath).Take(1).First().Split(' ');
-            Console.WriteLine("initialize: ");
-            foreach (string detectorState in detectorStates)
-            {
-                Console.WriteLine("{0} ", detectorState);
-            }
-            Console.WriteLine("\n");
+            detectorStates = Array.ConvertAll(File.ReadLines(filePath).Take(1).First().Split(' '),bool.Parse);
         }
         /// <summary>
         /// reads one line of data from file
@@ -36,18 +29,13 @@ namespace BulletTrainHMI
         /// <param name="line">line to read</param>
         public void readData(int line)
         {
-            lineData = File.ReadLines(filePath).Skip(line).Take(1).First().Split(' ');
-            for (int i = 0; i < 5; i++)
-            {
-                if (lineData[i] == "NORMAL" || lineData[i] == "FIRE")
-                    detectorStates[i] = lineData[i];
-            }
+            detectorStates = Array.ConvertAll(File.ReadLines(filePath).Skip(line).Take(1).First().Split(' '), bool.Parse);
         }
         /// <summary>
         /// returns detector status array
         /// </summary>
         /// <returns></returns>
-        public string[] getFireStatus()
+        public bool[] getFireStatus()
         {
             return detectorStates;
         }
