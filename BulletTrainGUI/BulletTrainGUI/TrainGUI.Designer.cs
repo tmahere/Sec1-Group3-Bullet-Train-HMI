@@ -31,145 +31,82 @@ namespace BulletTrainGUI
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrainGUI));
-            this.axGlg1 = new AxGlgoleLib.AxGlg();
-            this.axGlg2 = new AxGlgoleLib.AxGlg();
-            this.axGlg3 = new AxGlgoleLib.AxGlg();
-            this.axGlg4 = new AxGlgoleLib.AxGlg();
-            this.axGlg6 = new AxGlgoleLib.AxGlg();
-            this.axGlg7 = new AxGlgoleLib.AxGlg();
-            this.axGlg8 = new AxGlgoleLib.AxGlg();
-            this.axGlg10 = new AxGlgoleLib.AxGlg();
-            this.axGlg13 = new AxGlgoleLib.AxGlg();
-            this.axGlg14 = new AxGlgoleLib.AxGlg();
-            this.axGlg15 = new AxGlgoleLib.AxGlg();
+            this.mapLocation = new AxGlgoleLib.AxGlg();
+            this.destCoords = new AxGlgoleLib.AxGlg();
+            this.doorButton = new AxGlgoleLib.AxGlg();
+            this.lightsButton = new AxGlgoleLib.AxGlg();
             this.loopTimer = new System.Windows.Forms.Timer(this.components);
             this.voltageLabel = new System.Windows.Forms.Label();
             this.currentLabel = new System.Windows.Forms.Label();
-            this.pantographIndicator = new AxGlgoleLib.AxGlg();
-            this.axGlg12 = new AxGlgoleLib.AxGlg();
+            this.sysPowIndicator = new AxGlgoleLib.AxGlg();
+            this.fireIndicator = new AxGlgoleLib.AxGlg();
             this.kvLabel = new System.Windows.Forms.Label();
             this.hzLabel = new System.Windows.Forms.Label();
             this.sysPowLabel = new System.Windows.Forms.Label();
             this.percentLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pantographIndicator)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg12)).BeginInit();
+            this.doorLabel = new System.Windows.Forms.Label();
+            this.doorStatusLabel = new System.Windows.Forms.Label();
+            this.lightsLabel = new System.Windows.Forms.Label();
+            this.lightStatusLabel = new System.Windows.Forms.Label();
+            this.sysPowGauge = new AxGlgoleLib.AxGlg();
+            this.voltageMeter = new AxGlgoleLib.AxGlg();
+            this.currentMeter = new AxGlgoleLib.AxGlg();
+            this.radio = new AxGlgoleLib.AxGlg();
+            this.radioLever = new AxGlgoleLib.AxGlg();
+            this.thermometer = new AxGlgoleLib.AxGlg();
+            this.thermoAdjust = new AxGlgoleLib.AxGlg();
+            this.currentCoords = new AxGlgoleLib.AxGlg();
+            ((System.ComponentModel.ISupportInitialize)(this.mapLocation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.destCoords)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lightsButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sysPowIndicator)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fireIndicator)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sysPowGauge)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.voltageMeter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currentMeter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioLever)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thermometer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thermoAdjust)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currentCoords)).BeginInit();
             this.SuspendLayout();
             // 
-            // axGlg1
+            // mapLocation
             // 
-            this.axGlg1.Enabled = true;
-            this.axGlg1.Location = new System.Drawing.Point(21, 21);
-            this.axGlg1.Name = "axGlg1";
-            this.axGlg1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg1.OcxState")));
-            this.axGlg1.Size = new System.Drawing.Size(101, 193);
-            this.axGlg1.TabIndex = 0;
-            this.axGlg1.Input += new AxGlgoleLib._DGlgEvents_InputEventHandler(this.axGlg1_Input);
+            this.mapLocation.Enabled = true;
+            this.mapLocation.Location = new System.Drawing.Point(12, 534);
+            this.mapLocation.Name = "mapLocation";
+            this.mapLocation.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mapLocation.OcxState")));
+            this.mapLocation.Size = new System.Drawing.Size(392, 284);
+            this.mapLocation.TabIndex = 2;
             // 
-            // axGlg2
+            // destCoords
             // 
-            this.axGlg2.Enabled = true;
-            this.axGlg2.Location = new System.Drawing.Point(21, 205);
-            this.axGlg2.Name = "axGlg2";
-            this.axGlg2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg2.OcxState")));
-            this.axGlg2.Size = new System.Drawing.Size(101, 74);
-            this.axGlg2.TabIndex = 1;
-            this.axGlg2.Input += new AxGlgoleLib._DGlgEvents_InputEventHandler(this.axGlg2_Input);
+            this.destCoords.Enabled = true;
+            this.destCoords.Location = new System.Drawing.Point(12, 486);
+            this.destCoords.Name = "destCoords";
+            this.destCoords.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("destCoords.OcxState")));
+            this.destCoords.Size = new System.Drawing.Size(392, 40);
+            this.destCoords.TabIndex = 5;
             // 
-            // axGlg3
+            // doorButton
             // 
-            this.axGlg3.Enabled = true;
-            this.axGlg3.Location = new System.Drawing.Point(21, 578);
-            this.axGlg3.Name = "axGlg3";
-            this.axGlg3.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg3.OcxState")));
-            this.axGlg3.Size = new System.Drawing.Size(392, 284);
-            this.axGlg3.TabIndex = 2;
+            this.doorButton.Enabled = true;
+            this.doorButton.Location = new System.Drawing.Point(21, 329);
+            this.doorButton.Name = "doorButton";
+            this.doorButton.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("doorButton.OcxState")));
+            this.doorButton.Size = new System.Drawing.Size(61, 56);
+            this.doorButton.TabIndex = 6;
             // 
-            // axGlg4
+            // lightsButton
             // 
-            this.axGlg4.Enabled = true;
-            this.axGlg4.Location = new System.Drawing.Point(362, 112);
-            this.axGlg4.Name = "axGlg4";
-            this.axGlg4.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg4.OcxState")));
-            this.axGlg4.Size = new System.Drawing.Size(51, 92);
-            this.axGlg4.TabIndex = 3;
-            this.axGlg4.Input += new AxGlgoleLib._DGlgEvents_InputEventHandler(this.axGlg4_Input);
-            // 
-            // axGlg6
-            // 
-            this.axGlg6.Enabled = true;
-            this.axGlg6.Location = new System.Drawing.Point(21, 517);
-            this.axGlg6.Name = "axGlg6";
-            this.axGlg6.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg6.OcxState")));
-            this.axGlg6.Size = new System.Drawing.Size(392, 53);
-            this.axGlg6.TabIndex = 5;
-            // 
-            // axGlg7
-            // 
-            this.axGlg7.Enabled = true;
-            this.axGlg7.Location = new System.Drawing.Point(21, 315);
-            this.axGlg7.Name = "axGlg7";
-            this.axGlg7.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg7.OcxState")));
-            this.axGlg7.Size = new System.Drawing.Size(186, 175);
-            this.axGlg7.TabIndex = 6;
-            // 
-            // axGlg8
-            // 
-            this.axGlg8.Enabled = true;
-            this.axGlg8.Location = new System.Drawing.Point(227, 315);
-            this.axGlg8.Name = "axGlg8";
-            this.axGlg8.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg8.OcxState")));
-            this.axGlg8.Size = new System.Drawing.Size(186, 175);
-            this.axGlg8.TabIndex = 7;
-            // 
-            // axGlg10
-            // 
-            this.axGlg10.Enabled = true;
-            this.axGlg10.Location = new System.Drawing.Point(871, 23);
-            this.axGlg10.Name = "axGlg10";
-            this.axGlg10.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg10.OcxState")));
-            this.axGlg10.Size = new System.Drawing.Size(131, 226);
-            this.axGlg10.TabIndex = 9;
-            this.axGlg10.Input += new AxGlgoleLib._DGlgEvents_InputEventHandler(this.axGlg10_Input);
-            // 
-            // axGlg13
-            // 
-            this.axGlg13.Enabled = true;
-            this.axGlg13.Location = new System.Drawing.Point(718, 21);
-            this.axGlg13.Name = "axGlg13";
-            this.axGlg13.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg13.OcxState")));
-            this.axGlg13.Size = new System.Drawing.Size(57, 228);
-            this.axGlg13.TabIndex = 13;
-            this.axGlg13.Input += new AxGlgoleLib._DGlgEvents_InputEventHandler(this.axGlg13_Input);
-            // 
-            // axGlg14
-            // 
-            this.axGlg14.Enabled = true;
-            this.axGlg14.Location = new System.Drawing.Point(1086, 23);
-            this.axGlg14.Name = "axGlg14";
-            this.axGlg14.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg14.OcxState")));
-            this.axGlg14.Size = new System.Drawing.Size(131, 227);
-            this.axGlg14.TabIndex = 14;
-            this.axGlg14.Input += new AxGlgoleLib._DGlgEvents_InputEventHandler(this.axGlg14_Input);
-            // 
-            // axGlg15
-            // 
-            this.axGlg15.Enabled = true;
-            this.axGlg15.Location = new System.Drawing.Point(165, 73);
-            this.axGlg15.Name = "axGlg15";
-            this.axGlg15.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg15.OcxState")));
-            this.axGlg15.Size = new System.Drawing.Size(160, 164);
-            this.axGlg15.TabIndex = 15;
+            this.lightsButton.Enabled = true;
+            this.lightsButton.Location = new System.Drawing.Point(21, 416);
+            this.lightsButton.Name = "lightsButton";
+            this.lightsButton.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("lightsButton.OcxState")));
+            this.lightsButton.Size = new System.Drawing.Size(61, 56);
+            this.lightsButton.TabIndex = 7;
             // 
             // loopTimer
             // 
@@ -199,23 +136,23 @@ namespace BulletTrainGUI
             this.currentLabel.Text = "40.1";
             this.currentLabel.Click += new System.EventHandler(this.currentLabel_Click);
             // 
-            // pantographIndicator
+            // sysPowIndicator
             // 
-            this.pantographIndicator.Enabled = true;
-            this.pantographIndicator.Location = new System.Drawing.Point(786, 205);
-            this.pantographIndicator.Name = "pantographIndicator";
-            this.pantographIndicator.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pantographIndicator.OcxState")));
-            this.pantographIndicator.Size = new System.Drawing.Size(45, 44);
-            this.pantographIndicator.TabIndex = 21;
+            this.sysPowIndicator.Enabled = true;
+            this.sysPowIndicator.Location = new System.Drawing.Point(786, 205);
+            this.sysPowIndicator.Name = "sysPowIndicator";
+            this.sysPowIndicator.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("sysPowIndicator.OcxState")));
+            this.sysPowIndicator.Size = new System.Drawing.Size(45, 44);
+            this.sysPowIndicator.TabIndex = 21;
             // 
-            // axGlg12
+            // fireIndicator
             // 
-            this.axGlg12.Enabled = true;
-            this.axGlg12.Location = new System.Drawing.Point(466, 21);
-            this.axGlg12.Name = "axGlg12";
-            this.axGlg12.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg12.OcxState")));
-            this.axGlg12.Size = new System.Drawing.Size(186, 284);
-            this.axGlg12.TabIndex = 25;
+            this.fireIndicator.Enabled = true;
+            this.fireIndicator.Location = new System.Drawing.Point(466, 21);
+            this.fireIndicator.Name = "fireIndicator";
+            this.fireIndicator.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("fireIndicator.OcxState")));
+            this.fireIndicator.Size = new System.Drawing.Size(186, 284);
+            this.fireIndicator.TabIndex = 25;
             // 
             // kvLabel
             // 
@@ -261,73 +198,199 @@ namespace BulletTrainGUI
             this.percentLabel.TabIndex = 29;
             this.percentLabel.Text = "%";
             // 
+            // doorLabel
+            // 
+            this.doorLabel.AutoSize = true;
+            this.doorLabel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.doorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.doorLabel.Location = new System.Drawing.Point(97, 341);
+            this.doorLabel.Name = "doorLabel";
+            this.doorLabel.Size = new System.Drawing.Size(89, 31);
+            this.doorLabel.TabIndex = 30;
+            this.doorLabel.Text = "Door -";
+            // 
+            // doorStatusLabel
+            // 
+            this.doorStatusLabel.AutoSize = true;
+            this.doorStatusLabel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.doorStatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.doorStatusLabel.Location = new System.Drawing.Point(180, 341);
+            this.doorStatusLabel.Name = "doorStatusLabel";
+            this.doorStatusLabel.Size = new System.Drawing.Size(99, 31);
+            this.doorStatusLabel.TabIndex = 31;
+            this.doorStatusLabel.Text = "Closed";
+            // 
+            // lightsLabel
+            // 
+            this.lightsLabel.AutoSize = true;
+            this.lightsLabel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lightsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.lightsLabel.Location = new System.Drawing.Point(97, 428);
+            this.lightsLabel.Name = "lightsLabel";
+            this.lightsLabel.Size = new System.Drawing.Size(103, 31);
+            this.lightsLabel.TabIndex = 32;
+            this.lightsLabel.Text = "Lights -";
+            // 
+            // lightStatusLabel
+            // 
+            this.lightStatusLabel.AutoSize = true;
+            this.lightStatusLabel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lightStatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.lightStatusLabel.Location = new System.Drawing.Point(195, 428);
+            this.lightStatusLabel.Name = "lightStatusLabel";
+            this.lightStatusLabel.Size = new System.Drawing.Size(69, 31);
+            this.lightStatusLabel.TabIndex = 33;
+            this.lightStatusLabel.Text = "OFF";
+            // 
+            // sysPowGauge
+            // 
+            this.sysPowGauge.Enabled = true;
+            this.sysPowGauge.Location = new System.Drawing.Point(723, 21);
+            this.sysPowGauge.Name = "sysPowGauge";
+            this.sysPowGauge.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("sysPowGauge.OcxState")));
+            this.sysPowGauge.Size = new System.Drawing.Size(57, 228);
+            this.sysPowGauge.TabIndex = 34;
+            // 
+            // voltageMeter
+            // 
+            this.voltageMeter.Enabled = true;
+            this.voltageMeter.Location = new System.Drawing.Point(876, 23);
+            this.voltageMeter.Name = "voltageMeter";
+            this.voltageMeter.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("voltageMeter.OcxState")));
+            this.voltageMeter.Size = new System.Drawing.Size(131, 226);
+            this.voltageMeter.TabIndex = 35;
+            // 
+            // currentMeter
+            // 
+            this.currentMeter.Enabled = true;
+            this.currentMeter.Location = new System.Drawing.Point(1088, 22);
+            this.currentMeter.Name = "currentMeter";
+            this.currentMeter.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("currentMeter.OcxState")));
+            this.currentMeter.Size = new System.Drawing.Size(131, 227);
+            this.currentMeter.TabIndex = 36;
+            // 
+            // radio
+            // 
+            this.radio.Enabled = true;
+            this.radio.Location = new System.Drawing.Point(165, 73);
+            this.radio.Name = "radio";
+            this.radio.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("radio.OcxState")));
+            this.radio.Size = new System.Drawing.Size(160, 164);
+            this.radio.TabIndex = 15;
+            // 
+            // radioLever
+            // 
+            this.radioLever.Enabled = true;
+            this.radioLever.Location = new System.Drawing.Point(370, 112);
+            this.radioLever.Name = "radioLever";
+            this.radioLever.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("radioLever.OcxState")));
+            this.radioLever.Size = new System.Drawing.Size(51, 92);
+            this.radioLever.TabIndex = 37;
+            // 
+            // thermometer
+            // 
+            this.thermometer.Enabled = true;
+            this.thermometer.Location = new System.Drawing.Point(21, 21);
+            this.thermometer.Name = "thermometer";
+            this.thermometer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("thermometer.OcxState")));
+            this.thermometer.Size = new System.Drawing.Size(101, 193);
+            this.thermometer.TabIndex = 38;
+            // 
+            // thermoAdjust
+            // 
+            this.thermoAdjust.Enabled = true;
+            this.thermoAdjust.Location = new System.Drawing.Point(21, 205);
+            this.thermoAdjust.Name = "thermoAdjust";
+            this.thermoAdjust.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("thermoAdjust.OcxState")));
+            this.thermoAdjust.Size = new System.Drawing.Size(101, 74);
+            this.thermoAdjust.TabIndex = 39;
+            // 
+            // currentCoords
+            // 
+            this.currentCoords.Enabled = true;
+            this.currentCoords.Location = new System.Drawing.Point(12, 822);
+            this.currentCoords.Name = "currentCoords";
+            this.currentCoords.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("currentCoords.OcxState")));
+            this.currentCoords.Size = new System.Drawing.Size(392, 40);
+            this.currentCoords.TabIndex = 40;
+            // 
             // TrainGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1269, 874);
+            this.Controls.Add(this.currentCoords);
+            this.Controls.Add(this.thermoAdjust);
+            this.Controls.Add(this.thermometer);
+            this.Controls.Add(this.radioLever);
+            this.Controls.Add(this.currentMeter);
+            this.Controls.Add(this.voltageMeter);
+            this.Controls.Add(this.sysPowGauge);
+            this.Controls.Add(this.lightStatusLabel);
+            this.Controls.Add(this.lightsLabel);
+            this.Controls.Add(this.doorLabel);
             this.Controls.Add(this.sysPowLabel);
-            this.Controls.Add(this.axGlg12);
-            this.Controls.Add(this.pantographIndicator);
+            this.Controls.Add(this.fireIndicator);
+            this.Controls.Add(this.sysPowIndicator);
             this.Controls.Add(this.currentLabel);
             this.Controls.Add(this.voltageLabel);
-            this.Controls.Add(this.axGlg15);
-            this.Controls.Add(this.axGlg14);
-            this.Controls.Add(this.axGlg13);
-            this.Controls.Add(this.axGlg10);
-            this.Controls.Add(this.axGlg8);
-            this.Controls.Add(this.axGlg7);
-            this.Controls.Add(this.axGlg6);
-            this.Controls.Add(this.axGlg4);
-            this.Controls.Add(this.axGlg3);
-            this.Controls.Add(this.axGlg2);
-            this.Controls.Add(this.axGlg1);
+            this.Controls.Add(this.radio);
+            this.Controls.Add(this.lightsButton);
+            this.Controls.Add(this.doorButton);
+            this.Controls.Add(this.destCoords);
+            this.Controls.Add(this.mapLocation);
             this.Controls.Add(this.kvLabel);
             this.Controls.Add(this.hzLabel);
             this.Controls.Add(this.percentLabel);
+            this.Controls.Add(this.doorStatusLabel);
             this.Name = "TrainGUI";
             this.Text = "Bullet Train HMI";
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pantographIndicator)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mapLocation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.destCoords)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lightsButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sysPowIndicator)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fireIndicator)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sysPowGauge)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.voltageMeter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currentMeter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioLever)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thermometer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thermoAdjust)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currentCoords)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private AxGlgoleLib.AxGlg axGlg1;
-        private AxGlgoleLib.AxGlg axGlg2;
-        private AxGlgoleLib.AxGlg axGlg3;
-        private AxGlgoleLib.AxGlg axGlg4;
-        private AxGlgoleLib.AxGlg axGlg6;
-        private AxGlgoleLib.AxGlg axGlg7;
-        private AxGlgoleLib.AxGlg axGlg8;
-        private AxGlgoleLib.AxGlg axGlg10;
-        private AxGlgoleLib.AxGlg axGlg13;
-        private AxGlgoleLib.AxGlg axGlg14;
-        private AxGlgoleLib.AxGlg axGlg15;
+        private AxGlgoleLib.AxGlg mapLocation;
+        private AxGlgoleLib.AxGlg destCoords;
+        private AxGlgoleLib.AxGlg doorButton;
+        private AxGlgoleLib.AxGlg lightsButton;
         private System.Windows.Forms.Timer loopTimer;
         private System.Windows.Forms.Label voltageLabel;
         private System.Windows.Forms.Label currentLabel;
-        private AxGlgoleLib.AxGlg pantographIndicator;
-        private AxGlgoleLib.AxGlg axGlg12;
+        private AxGlgoleLib.AxGlg sysPowIndicator;
+        private AxGlgoleLib.AxGlg fireIndicator;
         private System.Windows.Forms.Label kvLabel;
         private System.Windows.Forms.Label hzLabel;
         private System.Windows.Forms.Label sysPowLabel;
         private System.Windows.Forms.Label percentLabel;
+        private System.Windows.Forms.Label doorLabel;
+        private System.Windows.Forms.Label doorStatusLabel;
+        private System.Windows.Forms.Label lightsLabel;
+        private System.Windows.Forms.Label lightStatusLabel;
+        private AxGlgoleLib.AxGlg sysPowGauge;
+        private AxGlgoleLib.AxGlg voltageMeter;
+        private AxGlgoleLib.AxGlg currentMeter;
+        private AxGlgoleLib.AxGlg radio;
+        private AxGlgoleLib.AxGlg radioLever;
+        private AxGlgoleLib.AxGlg thermometer;
+        private AxGlgoleLib.AxGlg thermoAdjust;
+        private AxGlgoleLib.AxGlg currentCoords;
     }
 }
 

@@ -45,36 +45,6 @@ namespace BulletTrainGUI
             loopTimer.Start();
         }
 
-        private void axGlg1_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e) // current thermometer
-        {
-            
-        }
-
-        private void axGlg2_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e) // thermometer adjuster
-        {
-            
-        }
-
-        private void axGlg4_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e) // radio - on/off
-        {
-            
-        }
-
-        private void axGlg10_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e) // amps meter
-        {
-
-        }
-
-        private void axGlg14_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e) // voltage meter
-        {
-
-        }
-
-        private void axGlg13_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e) // lower/raise pantograph
-        {
-
-        }
-
         private void loopTimer_Tick(object sender, EventArgs e) // example on how to simulate random data by looping through an array
         {
             float[] sample = { 40.3f, 41.2f, 41.6f, 42.4f, 45.1f, 44.7f, 43.9f, 43.2f, 41.7f, 41.9f, 41.6f };
@@ -93,5 +63,29 @@ namespace BulletTrainGUI
 
         }
 
+        private void axGlg10_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e)
+        {
+
+        }
+
+        private void axGlg14_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e)
+        {
+
+        }
+
+        private void axGlg4_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e)
+        {
+
+        }
+
+        private void axGlg1_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e)
+        {
+
+        }
+
+        private void axGlg2_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e)
+        {
+
+        }
     }
 }
