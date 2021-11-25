@@ -16,7 +16,7 @@ namespace DrivingModule
 
         public Brake()
         {
-            brakeFile = @"C:\Desktop\BulletFiles\Brakes.txt";
+            brakeFile = Path.Combine(Environment.CurrentDirectory, @"Sec-1-Group3-Bullet-Train-HMI\", "Brakes.txt");
             slowDown = "Slow Down";
             stopTrain = "Stop Train";
         }
