@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
+
 namespace DrivingModule
 {
     public class DriveMode: Driving
@@ -16,30 +17,35 @@ namespace DrivingModule
         {
             driveMode = "P";
             driveFile = @"C:\Desktop\BulletFiles\DriveModes.txt";
-
         }
 
-        private void storeUserDrive(string userChoice)
+        private void StoreUserDrive(string userChoice)
         {
              string entireLine;
              int lineLength;
+             float currentSpeed;
+             SpeedChange train = new();
 
-             writeFile(driveFile, userChoice);
+             currentSpeed = train.GetCurrentSpeed();
+            if (currentSpeed == 0)
+            {
+                WriteFile(driveFile, userChoice);
+                entireLine = ReadFile(driveFile, driveMode);
+                lineLength = entireLine.Length;
+                lineLength--;
 
-             entireLine = readFile(driveFile, driveMode);
-             lineLength = entireLine.Length;
-             lineLength--;
-
-             driveMode = entireLine[lineLength].ToString();
-               
+                driveMode = entireLine[lineLength].ToString();
+            }
+            else
+                Console.WriteLine("WARNING: Stop Train Before Switching Gears");             
         }
 
-        public void setDriveMode(string userChoice)
+        public void SetDriveMode(string userChoice)
         {
-            storeUserDrive(userChoice);
+            StoreUserDrive(userChoice);
         }
 
-        public string getDriveMode()
+        public string GetUserDrive()
         {
             return driveMode;
         }

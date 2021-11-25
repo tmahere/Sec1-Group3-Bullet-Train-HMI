@@ -5,15 +5,15 @@ namespace DrivingModule
 {
    public abstract class Driving
     {
-        public char userSelection;
+      
 
-        public void writeFile(string filePath, string storeContents)
+        protected void WriteFile(string filePath, string storeContents)
         {
             try
             {
                 using (StreamWriter sw = new StreamWriter(filePath, append: true))
-                {
-                    sw.Write("," + storeContents);
+                {                  
+                    sw.WriteAsync(storeContents + ",");
                     sw.Close();
                 }
 
@@ -25,7 +25,7 @@ namespace DrivingModule
             }
         }
 
-        protected string readFile(string filePath, string placeContents)
+        protected string ReadFile(string filePath, string placeContents)
         {
             try
             {
