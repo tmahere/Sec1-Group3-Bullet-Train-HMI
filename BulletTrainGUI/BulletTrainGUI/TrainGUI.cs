@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using GlgoleLib;
+using GenLogic;
 using System.Windows.Forms;
 
 // don't change any of the method names because the form WILL break
@@ -60,30 +61,15 @@ namespace BulletTrainGUI
 
         private void currentLabel_Click(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void axGlg10_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e)
+        private void currentMeter_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e)
         {
-
+            
         }
 
-        private void axGlg14_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e)
-        {
-
-        }
-
-        private void axGlg4_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e)
-        {
-
-        }
-
-        private void axGlg1_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e)
-        {
-
-        }
-
-        private void axGlg2_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e)
+        private void label17_Click(object sender, EventArgs e)
         {
 
         }
