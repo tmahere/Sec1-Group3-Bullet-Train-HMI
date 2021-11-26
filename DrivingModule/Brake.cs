@@ -10,13 +10,13 @@ namespace DrivingModule
 { 
     public class Brake: Driving
     {
-        public string brakeFile;
-        public string slowDown;
-        public string stopTrain;
+        protected string brakeFile;
+        protected string slowDown;
+        protected string stopTrain;
 
         public Brake()
         {
-            brakeFile = Path.Combine(Environment.CurrentDirectory, @"Sec-1-Group3-Bullet-Train-HMI\", "Brakes.txt");
+            brakeFile = Path.Combine(Environment.CurrentDirectory, @"DriveFiles\", "Brakes.txt");
             slowDown = "Slow Down";
             stopTrain = "Stop Train";
         }
@@ -41,7 +41,7 @@ namespace DrivingModule
             StoreBrakeStop();
       
         }
-        protected void StoreBrakeSlow()
+        protected internal void StoreBrakeSlow()
         {
 
             SpeedChange train = new();

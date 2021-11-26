@@ -20,7 +20,7 @@ namespace DrivingModule
 
         public BrakeQuality()
         {
-            qualityFile = (Path.Combine(Environment.CurrentDirectory,@"Sec-1-Group3-Bullet-Train-HMI\","BrakeQualities.txt"));
+            qualityFile = (Path.Combine(Environment.CurrentDirectory,@"DriveFiles\","BrakeQualities.txt"));
             goodBrake = "Acceptable";
             badBrake = "Check Brake";
 

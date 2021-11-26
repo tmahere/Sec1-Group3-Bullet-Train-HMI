@@ -16,7 +16,7 @@ namespace DrivingModule
         public DriveMode()
         {
             driveMode = "P";
-            driveFile = Path.Combine(Environment.CurrentDirectory, @"Sec-1-Group3-Bullet-Train-HMI\", "DriveModes.txt");
+            driveFile = Path.Combine(Environment.CurrentDirectory, @"DriveFiles\", "DriveModes.txt");
         }
 
         private void StoreUserDrive(string userChoice)

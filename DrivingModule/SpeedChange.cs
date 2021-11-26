@@ -18,13 +18,15 @@ namespace DrivingModule
 
         public SpeedChange()
         {
-            speedFile = Path.Combine(Environment.CurrentDirectory, @"Sec-1-Group3-Bullet-Train-HMI\", "SpeedChanges.txt");
+            speedFile = Path.Combine(Environment.CurrentDirectory, @"DriveFiles\","SpeedChanges.txt");
             speedStorage = "none";
             speedChanges = new float[5] { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };         
         }
 
         private void ChangeSpeed(float currentSpeed, bool direction)
-        {     
+        {
+            Brake train = new();
+
             for (int i = 0; i < speedChanges.Length; i++)
             {
                 speedChanges[i] = currentSpeed;
@@ -33,7 +35,10 @@ namespace DrivingModule
                     currentSpeed++;
                 }
                 else
-                    currentSpeed--;  
+                {
+                    currentSpeed--;
+                    train.StoreBrakeSlow();
+                }            
             }
             StoreSpeed();
         }
