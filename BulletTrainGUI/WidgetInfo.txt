@@ -1,0 +1,54 @@
+widgetName = tagName
+[desc]
+------------
+alarm_current = "Current"
+Meter used to measure current
+
+alarm_voltage = "Voltage"
+Meter used to measure voltage
+
+button3 - stop
+[unused] red button that says "stop"
+
+button8
+used as the radio "talk" button, does nothing
+
+button11 - red = dark red-"Off" bright red-"On"
+Used as the fire indicator
+
+button11 = dark green-"Off" bright green-"On"
+Used as the green ON/OFF indicators
+
+indicator5 = "Power"
+The system power guage, 0% to 100%
+
+indicator9
+[unused] colour indicator
+
+meter9
+[unused] Old current meter
+
+meter13
+[unused] Old voltage meter
+
+meter33 = "Speed"
+Speed guage
+
+spinner10
+[unused] Old temperature dial/adjuster
+
+switch3 = "Position"
+USed as the ON/OFF switch for the radio
+0 = ON
+1 = OFF
+
+switch10
+Driving adjuster?
+
+switch18
+[unused] Old 3-position dial
+
+switch48 = "Position"
+ON/OFF switch for doors, lights, camera
+0 = OFF
+1 = ON

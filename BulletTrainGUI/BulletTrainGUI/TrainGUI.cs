@@ -34,24 +34,103 @@ label.text = [function call];
 ^^ some code modifying might be required
 */
 
+
+// FOR THE DEMO-- when the user clicks a certain key let an event happen, ex. "Check brake" screen changes
 namespace BulletTrainGUI
 {
     public partial class TrainGUI : Form
     {
-
         public TrainGUI()
         {
             InitializeComponent();
-            loopTimer.Interval = 100;
+            loopTimer.Interval = 500;
             loopTimer.Start();
         }
-
+        
+        // move some items to separate timers depending on their rate of change, OR into a separate method if it takes in user input
         private void loopTimer_Tick(object sender, EventArgs e) // example on how to simulate random data by looping through an array
         {
             float[] sample = { 40.3f, 41.2f, 41.6f, 42.4f, 45.1f, 44.7f, 43.9f, 43.2f, 41.7f, 41.9f, 41.6f };
             Random rand = new Random();
 
-            currentLabel.Text = sample[rand.Next(0,11)].ToString();
+            float storedRand = sample[rand.Next(0,11)];
+
+            // current meter
+            currentLabel.Text = storedRand.ToString();
+            currentMeter.SetDTag("Current", storedRand, true);
+            currentMeter.Update();
+
+            // voltage meter
+            //voltageLabel.Text = storedRand.ToString();
+            //voltageMeter.SetDTag("Voltage", storedRand, true);
+            //voltageMeter.Update();
+
+            // system power meter
+            //sysPowLabel.Text = power.ToString();
+            //sysPowGauge.SetDTag("Power", power, true);
+            //sysPowGauge.Update();
+
+            // system power indicator
+
+
+
+            // longitude
+            //longitudeLabel.Text = longitude; //data sent in shouold be string format
+
+            // latitude
+            //latitudeLabel.Text = latitude; //data sent in shouold be string format
+
+            // mapLocation
+            //mapLocation.SetDTag("Location", location, true);
+            //mapLocation.Update();
+
+            // radioLever.SetDTag("Position", radioStatus, true);
+
+
+
+            // speed meter
+            //speedMeter.SetDTag("Speed", speed, true);
+            //speedMeter.Update();
+
+            // screen label - get it to center to panel1
+            //screenLabel.Text = enterTextHere();
+
+            // driving
+
+
+
+            // camera button - if off, have picture 1 and 2 off too (colour underneath is black, so set image to false??)
+
+            // pictureBox1
+
+            // picturebox2
+
+
+            // lights
+            //lightSwitch1.SetDTag("Position", lightStatus1, true);
+            //lightSwitch2.SetDTag("Position", lightStatus2, true);
+            //lightSwitch3.SetDTag("Position", lightStatus3, true);
+            //lightSwitch4.SetDTag("Position", lightStatus4, true);
+            //lightSwitch5.SetDTag("Position", lightStatus5, true);
+
+            // doors
+            //cabin1Label.Text = 
+            //cabin2Label.Text = 
+            //cabin3Label.Text = 
+            //cabin4Label.Text = 
+            //cabin5Label.Text = 
+
+            //cabin1Button
+            //cabin2Button
+            //cabin3Button
+            //cabin4Button
+            //cabin5Button
+
+            //fireIndicator
+
+            // temperature
+            //currentTemp
+            //desiredTemp
         }
 
         private void voltageLabel_Click(object sender, EventArgs e)

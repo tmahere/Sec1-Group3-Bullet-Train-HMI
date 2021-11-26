@@ -47,50 +47,48 @@ namespace BulletTrainGUI
             this.radioButton = new AxGlgoleLib.AxGlg();
             this.radioLever = new AxGlgoleLib.AxGlg();
             this.label1 = new System.Windows.Forms.Label();
-            this.currentLat = new AxGlgoleLib.AxGlg();
-            this.currentLong = new AxGlgoleLib.AxGlg();
-            this.label2 = new System.Windows.Forms.Label();
+            this.cameraLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.axGlg1 = new AxGlgoleLib.AxGlg();
+            this.cameraButton = new AxGlgoleLib.AxGlg();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.cabin5Label = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.axGlg6 = new AxGlgoleLib.AxGlg();
-            this.label12 = new System.Windows.Forms.Label();
+            this.cabin5Button = new AxGlgoleLib.AxGlg();
+            this.cabin4Label = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.axGlg5 = new AxGlgoleLib.AxGlg();
-            this.label10 = new System.Windows.Forms.Label();
+            this.cabin4Button = new AxGlgoleLib.AxGlg();
+            this.cabin3Label = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.axGlg4 = new AxGlgoleLib.AxGlg();
-            this.label8 = new System.Windows.Forms.Label();
+            this.cabin3Button = new AxGlgoleLib.AxGlg();
+            this.cabin2Label = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.axGlg3 = new AxGlgoleLib.AxGlg();
-            this.label7 = new System.Windows.Forms.Label();
+            this.cabin2Button = new AxGlgoleLib.AxGlg();
+            this.cabin1Label = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.axGlg2 = new AxGlgoleLib.AxGlg();
-            this.label16 = new System.Windows.Forms.Label();
+            this.cabin1Button = new AxGlgoleLib.AxGlg();
             this.label17 = new System.Windows.Forms.Label();
-            this.axGlg7 = new AxGlgoleLib.AxGlg();
-            this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.axGlg8 = new AxGlgoleLib.AxGlg();
-            this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.axGlg9 = new AxGlgoleLib.AxGlg();
-            this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.axGlg10 = new AxGlgoleLib.AxGlg();
-            this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.axGlg11 = new AxGlgoleLib.AxGlg();
             this.screenLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.axGlg12 = new AxGlgoleLib.AxGlg();
             this.axGlg13 = new AxGlgoleLib.AxGlg();
+            this.speedMeter = new AxGlgoleLib.AxGlg();
+            this.axGlg15 = new AxGlgoleLib.AxGlg();
+            this.longitudeLabel = new System.Windows.Forms.Label();
+            this.latitudeLabel = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.lightSwitch1 = new AxGlgoleLib.AxGlg();
+            this.lightSwitch2 = new AxGlgoleLib.AxGlg();
+            this.lightSwitch3 = new AxGlgoleLib.AxGlg();
+            this.lightSwitch4 = new AxGlgoleLib.AxGlg();
+            this.lightSwitch5 = new AxGlgoleLib.AxGlg();
             ((System.ComponentModel.ISupportInitialize)(this.mapLocation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sysPowIndicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fireIndicator)).BeginInit();
@@ -99,34 +97,34 @@ namespace BulletTrainGUI
             ((System.ComponentModel.ISupportInitialize)(this.currentMeter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioLever)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.currentLat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.currentLong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cameraButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cabin5Button)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cabin4Button)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cabin3Button)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cabin2Button)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cabin1Button)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axGlg12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axGlg13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.speedMeter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axGlg15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lightSwitch1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lightSwitch2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lightSwitch3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lightSwitch4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lightSwitch5)).BeginInit();
             this.SuspendLayout();
             // 
             // mapLocation
             // 
             this.mapLocation.Enabled = true;
-            this.mapLocation.Location = new System.Drawing.Point(12, 606);
+            this.mapLocation.Location = new System.Drawing.Point(17, 541);
             this.mapLocation.Name = "mapLocation";
             this.mapLocation.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mapLocation.OcxState")));
-            this.mapLocation.Size = new System.Drawing.Size(392, 256);
+            this.mapLocation.Size = new System.Drawing.Size(482, 321);
             this.mapLocation.TabIndex = 2;
             // 
             // loopTimer
@@ -138,7 +136,7 @@ namespace BulletTrainGUI
             this.voltageLabel.AutoSize = true;
             this.voltageLabel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.voltageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.voltageLabel.Location = new System.Drawing.Point(1155, 252);
+            this.voltageLabel.Location = new System.Drawing.Point(1057, 269);
             this.voltageLabel.Name = "voltageLabel";
             this.voltageLabel.Size = new System.Drawing.Size(54, 26);
             this.voltageLabel.TabIndex = 17;
@@ -150,7 +148,7 @@ namespace BulletTrainGUI
             this.currentLabel.AutoSize = true;
             this.currentLabel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.currentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.currentLabel.Location = new System.Drawing.Point(1367, 252);
+            this.currentLabel.Location = new System.Drawing.Point(1253, 269);
             this.currentLabel.Name = "currentLabel";
             this.currentLabel.Size = new System.Drawing.Size(54, 26);
             this.currentLabel.TabIndex = 18;
@@ -160,7 +158,7 @@ namespace BulletTrainGUI
             // sysPowIndicator
             // 
             this.sysPowIndicator.Enabled = true;
-            this.sysPowIndicator.Location = new System.Drawing.Point(1048, 203);
+            this.sysPowIndicator.Location = new System.Drawing.Point(930, 217);
             this.sysPowIndicator.Name = "sysPowIndicator";
             this.sysPowIndicator.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("sysPowIndicator.OcxState")));
             this.sysPowIndicator.Size = new System.Drawing.Size(45, 44);
@@ -169,7 +167,7 @@ namespace BulletTrainGUI
             // fireIndicator
             // 
             this.fireIndicator.Enabled = true;
-            this.fireIndicator.Location = new System.Drawing.Point(605, 36);
+            this.fireIndicator.Location = new System.Drawing.Point(645, 56);
             this.fireIndicator.Name = "fireIndicator";
             this.fireIndicator.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("fireIndicator.OcxState")));
             this.fireIndicator.Size = new System.Drawing.Size(87, 81);
@@ -180,7 +178,7 @@ namespace BulletTrainGUI
             this.kvLabel.AutoSize = true;
             this.kvLabel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.kvLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.kvLabel.Location = new System.Drawing.Point(1203, 252);
+            this.kvLabel.Location = new System.Drawing.Point(1105, 269);
             this.kvLabel.Name = "kvLabel";
             this.kvLabel.Size = new System.Drawing.Size(38, 26);
             this.kvLabel.TabIndex = 26;
@@ -191,7 +189,7 @@ namespace BulletTrainGUI
             this.hzLabel.AutoSize = true;
             this.hzLabel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.hzLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.hzLabel.Location = new System.Drawing.Point(1416, 252);
+            this.hzLabel.Location = new System.Drawing.Point(1302, 269);
             this.hzLabel.Name = "hzLabel";
             this.hzLabel.Size = new System.Drawing.Size(39, 26);
             this.hzLabel.TabIndex = 27;
@@ -202,18 +200,18 @@ namespace BulletTrainGUI
             this.sysPowLabel.AutoSize = true;
             this.sysPowLabel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.sysPowLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.sysPowLabel.Location = new System.Drawing.Point(972, 252);
+            this.sysPowLabel.Location = new System.Drawing.Point(854, 269);
             this.sysPowLabel.Name = "sysPowLabel";
-            this.sysPowLabel.Size = new System.Drawing.Size(54, 26);
+            this.sysPowLabel.Size = new System.Drawing.Size(24, 26);
             this.sysPowLabel.TabIndex = 28;
-            this.sysPowLabel.Text = "10.0";
+            this.sysPowLabel.Text = "0";
             // 
             // percentLabel
             // 
             this.percentLabel.AutoSize = true;
             this.percentLabel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.percentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.percentLabel.Location = new System.Drawing.Point(1021, 252);
+            this.percentLabel.Location = new System.Drawing.Point(903, 269);
             this.percentLabel.Name = "percentLabel";
             this.percentLabel.Size = new System.Drawing.Size(32, 26);
             this.percentLabel.TabIndex = 29;
@@ -222,35 +220,35 @@ namespace BulletTrainGUI
             // sysPowGauge
             // 
             this.sysPowGauge.Enabled = true;
-            this.sysPowGauge.Location = new System.Drawing.Point(982, 19);
+            this.sysPowGauge.Location = new System.Drawing.Point(864, 21);
             this.sysPowGauge.Name = "sysPowGauge";
             this.sysPowGauge.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("sysPowGauge.OcxState")));
-            this.sysPowGauge.Size = new System.Drawing.Size(57, 228);
+            this.sysPowGauge.Size = new System.Drawing.Size(57, 240);
             this.sysPowGauge.TabIndex = 34;
             // 
             // voltageMeter
             // 
             this.voltageMeter.Enabled = true;
-            this.voltageMeter.Location = new System.Drawing.Point(1131, 21);
+            this.voltageMeter.Location = new System.Drawing.Point(1033, 21);
             this.voltageMeter.Name = "voltageMeter";
             this.voltageMeter.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("voltageMeter.OcxState")));
-            this.voltageMeter.Size = new System.Drawing.Size(131, 228);
+            this.voltageMeter.Size = new System.Drawing.Size(131, 242);
             this.voltageMeter.TabIndex = 35;
             // 
             // currentMeter
             // 
             this.currentMeter.Enabled = true;
-            this.currentMeter.Location = new System.Drawing.Point(1343, 20);
+            this.currentMeter.Location = new System.Drawing.Point(1229, 21);
             this.currentMeter.Name = "currentMeter";
             this.currentMeter.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("currentMeter.OcxState")));
-            this.currentMeter.Size = new System.Drawing.Size(131, 227);
+            this.currentMeter.Size = new System.Drawing.Size(131, 240);
             this.currentMeter.TabIndex = 36;
             this.currentMeter.Input += new AxGlgoleLib._DGlgEvents_InputEventHandler(this.currentMeter_Input);
             // 
             // radioButton
             // 
             this.radioButton.Enabled = true;
-            this.radioButton.Location = new System.Drawing.Point(64, 189);
+            this.radioButton.Location = new System.Drawing.Point(584, 685);
             this.radioButton.Name = "radioButton";
             this.radioButton.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("radioButton.OcxState")));
             this.radioButton.Size = new System.Drawing.Size(55, 56);
@@ -259,7 +257,7 @@ namespace BulletTrainGUI
             // radioLever
             // 
             this.radioLever.Enabled = true;
-            this.radioLever.Location = new System.Drawing.Point(204, 88);
+            this.radioLever.Location = new System.Drawing.Point(730, 581);
             this.radioLever.Name = "radioLever";
             this.radioLever.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("radioLever.OcxState")));
             this.radioLever.Size = new System.Drawing.Size(51, 92);
@@ -270,66 +268,48 @@ namespace BulletTrainGUI
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(703, 64);
+            this.label1.Location = new System.Drawing.Point(743, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 31);
             this.label1.TabIndex = 41;
             this.label1.Text = "Fire";
             // 
-            // currentLat
+            // cameraLabel
             // 
-            this.currentLat.Enabled = true;
-            this.currentLat.Location = new System.Drawing.Point(208, 560);
-            this.currentLat.Name = "currentLat";
-            this.currentLat.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("currentLat.OcxState")));
-            this.currentLat.Size = new System.Drawing.Size(196, 40);
-            this.currentLat.TabIndex = 46;
-            // 
-            // currentLong
-            // 
-            this.currentLong.Enabled = true;
-            this.currentLong.Location = new System.Drawing.Point(12, 560);
-            this.currentLong.Name = "currentLong";
-            this.currentLong.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("currentLong.OcxState")));
-            this.currentLong.Size = new System.Drawing.Size(196, 40);
-            this.currentLong.TabIndex = 47;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label2.Location = new System.Drawing.Point(234, 306);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 31);
-            this.label2.TabIndex = 56;
-            this.label2.Text = "OFF";
+            this.cameraLabel.AutoSize = true;
+            this.cameraLabel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.cameraLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.cameraLabel.Location = new System.Drawing.Point(239, 32);
+            this.cameraLabel.Name = "cameraLabel";
+            this.cameraLabel.Size = new System.Drawing.Size(69, 31);
+            this.cameraLabel.TabIndex = 56;
+            this.cameraLabel.Text = "OFF";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label3.Location = new System.Drawing.Point(99, 306);
+            this.label3.Location = new System.Drawing.Point(104, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 31);
             this.label3.TabIndex = 55;
             this.label3.Text = "Cameras -";
             // 
-            // axGlg1
+            // cameraButton
             // 
-            this.axGlg1.Enabled = true;
-            this.axGlg1.Location = new System.Drawing.Point(21, 295);
-            this.axGlg1.Name = "axGlg1";
-            this.axGlg1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg1.OcxState")));
-            this.axGlg1.Size = new System.Drawing.Size(61, 56);
-            this.axGlg1.TabIndex = 54;
+            this.cameraButton.Enabled = true;
+            this.cameraButton.Location = new System.Drawing.Point(26, 21);
+            this.cameraButton.Name = "cameraButton";
+            this.cameraButton.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("cameraButton.OcxState")));
+            this.cameraButton.Size = new System.Drawing.Size(61, 56);
+            this.cameraButton.TabIndex = 54;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(40, 360);
+            this.pictureBox1.Location = new System.Drawing.Point(45, 86);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(165, 186);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -341,7 +321,7 @@ namespace BulletTrainGUI
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(200, 185);
+            this.label4.Location = new System.Drawing.Point(726, 678);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 31);
             this.label4.TabIndex = 65;
@@ -352,7 +332,7 @@ namespace BulletTrainGUI
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(195, 48);
+            this.label5.Location = new System.Drawing.Point(721, 541);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 31);
             this.label5.TabIndex = 66;
@@ -361,9 +341,8 @@ namespace BulletTrainGUI
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(11, 22);
+            this.pictureBox5.Location = new System.Drawing.Point(531, 515);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(165, 164);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -372,324 +351,224 @@ namespace BulletTrainGUI
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(209, 360);
+            this.pictureBox2.Location = new System.Drawing.Point(214, 86);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(165, 186);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 62;
             this.pictureBox2.TabStop = false;
             // 
-            // label14
+            // cabin5Label
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label14.Location = new System.Drawing.Point(618, 302);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(74, 25);
-            this.label14.TabIndex = 104;
-            this.label14.Text = "Closed";
+            this.cabin5Label.AutoSize = true;
+            this.cabin5Label.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.cabin5Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.cabin5Label.Location = new System.Drawing.Point(181, 447);
+            this.cabin5Label.Name = "cabin5Label";
+            this.cabin5Label.Size = new System.Drawing.Size(74, 25);
+            this.cabin5Label.TabIndex = 104;
+            this.cabin5Label.Text = "Closed";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label15.Location = new System.Drawing.Point(487, 302);
+            this.label15.Location = new System.Drawing.Point(50, 447);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(139, 25);
             this.label15.TabIndex = 103;
             this.label15.Text = "Cabin 5 Door -";
             // 
-            // axGlg6
+            // cabin5Button
             // 
-            this.axGlg6.Enabled = true;
-            this.axGlg6.Location = new System.Drawing.Point(449, 299);
-            this.axGlg6.Name = "axGlg6";
-            this.axGlg6.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg6.OcxState")));
-            this.axGlg6.Size = new System.Drawing.Size(33, 32);
-            this.axGlg6.TabIndex = 102;
+            this.cabin5Button.Enabled = true;
+            this.cabin5Button.Location = new System.Drawing.Point(12, 444);
+            this.cabin5Button.Name = "cabin5Button";
+            this.cabin5Button.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("cabin5Button.OcxState")));
+            this.cabin5Button.Size = new System.Drawing.Size(33, 32);
+            this.cabin5Button.TabIndex = 102;
             // 
-            // label12
+            // cabin4Label
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label12.Location = new System.Drawing.Point(618, 266);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(74, 25);
-            this.label12.TabIndex = 101;
-            this.label12.Text = "Closed";
+            this.cabin4Label.AutoSize = true;
+            this.cabin4Label.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.cabin4Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.cabin4Label.Location = new System.Drawing.Point(181, 411);
+            this.cabin4Label.Name = "cabin4Label";
+            this.cabin4Label.Size = new System.Drawing.Size(74, 25);
+            this.cabin4Label.TabIndex = 101;
+            this.cabin4Label.Text = "Closed";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label13.Location = new System.Drawing.Point(487, 266);
+            this.label13.Location = new System.Drawing.Point(50, 411);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(139, 25);
             this.label13.TabIndex = 100;
             this.label13.Text = "Cabin 4 Door -";
             // 
-            // axGlg5
+            // cabin4Button
             // 
-            this.axGlg5.Enabled = true;
-            this.axGlg5.Location = new System.Drawing.Point(449, 263);
-            this.axGlg5.Name = "axGlg5";
-            this.axGlg5.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg5.OcxState")));
-            this.axGlg5.Size = new System.Drawing.Size(33, 32);
-            this.axGlg5.TabIndex = 99;
+            this.cabin4Button.Enabled = true;
+            this.cabin4Button.Location = new System.Drawing.Point(12, 408);
+            this.cabin4Button.Name = "cabin4Button";
+            this.cabin4Button.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("cabin4Button.OcxState")));
+            this.cabin4Button.Size = new System.Drawing.Size(33, 32);
+            this.cabin4Button.TabIndex = 99;
             // 
-            // label10
+            // cabin3Label
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label10.Location = new System.Drawing.Point(618, 229);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 25);
-            this.label10.TabIndex = 98;
-            this.label10.Text = "Closed";
+            this.cabin3Label.AutoSize = true;
+            this.cabin3Label.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.cabin3Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.cabin3Label.Location = new System.Drawing.Point(181, 374);
+            this.cabin3Label.Name = "cabin3Label";
+            this.cabin3Label.Size = new System.Drawing.Size(74, 25);
+            this.cabin3Label.TabIndex = 98;
+            this.cabin3Label.Text = "Closed";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label11.Location = new System.Drawing.Point(487, 229);
+            this.label11.Location = new System.Drawing.Point(50, 374);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(139, 25);
             this.label11.TabIndex = 97;
             this.label11.Text = "Cabin 3 Door -";
             // 
-            // axGlg4
+            // cabin3Button
             // 
-            this.axGlg4.Enabled = true;
-            this.axGlg4.Location = new System.Drawing.Point(449, 226);
-            this.axGlg4.Name = "axGlg4";
-            this.axGlg4.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg4.OcxState")));
-            this.axGlg4.Size = new System.Drawing.Size(33, 32);
-            this.axGlg4.TabIndex = 96;
+            this.cabin3Button.Enabled = true;
+            this.cabin3Button.Location = new System.Drawing.Point(12, 371);
+            this.cabin3Button.Name = "cabin3Button";
+            this.cabin3Button.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("cabin3Button.OcxState")));
+            this.cabin3Button.Size = new System.Drawing.Size(33, 32);
+            this.cabin3Button.TabIndex = 96;
             // 
-            // label8
+            // cabin2Label
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label8.Location = new System.Drawing.Point(618, 191);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 25);
-            this.label8.TabIndex = 95;
-            this.label8.Text = "Closed";
+            this.cabin2Label.AutoSize = true;
+            this.cabin2Label.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.cabin2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.cabin2Label.Location = new System.Drawing.Point(181, 336);
+            this.cabin2Label.Name = "cabin2Label";
+            this.cabin2Label.Size = new System.Drawing.Size(74, 25);
+            this.cabin2Label.TabIndex = 95;
+            this.cabin2Label.Text = "Closed";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label9.Location = new System.Drawing.Point(487, 191);
+            this.label9.Location = new System.Drawing.Point(50, 336);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(139, 25);
             this.label9.TabIndex = 94;
             this.label9.Text = "Cabin 2 Door -";
             // 
-            // axGlg3
+            // cabin2Button
             // 
-            this.axGlg3.Enabled = true;
-            this.axGlg3.Location = new System.Drawing.Point(449, 188);
-            this.axGlg3.Name = "axGlg3";
-            this.axGlg3.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg3.OcxState")));
-            this.axGlg3.Size = new System.Drawing.Size(33, 32);
-            this.axGlg3.TabIndex = 93;
+            this.cabin2Button.Enabled = true;
+            this.cabin2Button.Location = new System.Drawing.Point(12, 333);
+            this.cabin2Button.Name = "cabin2Button";
+            this.cabin2Button.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("cabin2Button.OcxState")));
+            this.cabin2Button.Size = new System.Drawing.Size(33, 32);
+            this.cabin2Button.TabIndex = 93;
             // 
-            // label7
+            // cabin1Label
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label7.Location = new System.Drawing.Point(618, 151);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 25);
-            this.label7.TabIndex = 92;
-            this.label7.Text = "Closed";
+            this.cabin1Label.AutoSize = true;
+            this.cabin1Label.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.cabin1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.cabin1Label.Location = new System.Drawing.Point(181, 296);
+            this.cabin1Label.Name = "cabin1Label";
+            this.cabin1Label.Size = new System.Drawing.Size(74, 25);
+            this.cabin1Label.TabIndex = 92;
+            this.cabin1Label.Text = "Closed";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label6.Location = new System.Drawing.Point(487, 151);
+            this.label6.Location = new System.Drawing.Point(50, 296);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(139, 25);
             this.label6.TabIndex = 91;
             this.label6.Text = "Cabin 1 Door -";
             // 
-            // axGlg2
+            // cabin1Button
             // 
-            this.axGlg2.Enabled = true;
-            this.axGlg2.Location = new System.Drawing.Point(449, 148);
-            this.axGlg2.Name = "axGlg2";
-            this.axGlg2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg2.OcxState")));
-            this.axGlg2.Size = new System.Drawing.Size(33, 32);
-            this.axGlg2.TabIndex = 90;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label16.Location = new System.Drawing.Point(884, 302);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(52, 25);
-            this.label16.TabIndex = 119;
-            this.label16.Text = "OFF";
+            this.cabin1Button.Enabled = true;
+            this.cabin1Button.Location = new System.Drawing.Point(12, 293);
+            this.cabin1Button.Name = "cabin1Button";
+            this.cabin1Button.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("cabin1Button.OcxState")));
+            this.cabin1Button.Size = new System.Drawing.Size(33, 32);
+            this.cabin1Button.TabIndex = 90;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label17.Location = new System.Drawing.Point(740, 302);
+            this.label17.Location = new System.Drawing.Point(303, 447);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(149, 25);
+            this.label17.Size = new System.Drawing.Size(137, 25);
             this.label17.TabIndex = 118;
-            this.label17.Text = "Cabin 5 Lights -";
-            // 
-            // axGlg7
-            // 
-            this.axGlg7.Enabled = true;
-            this.axGlg7.Location = new System.Drawing.Point(702, 299);
-            this.axGlg7.Name = "axGlg7";
-            this.axGlg7.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg7.OcxState")));
-            this.axGlg7.Size = new System.Drawing.Size(33, 32);
-            this.axGlg7.TabIndex = 117;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label18.Location = new System.Drawing.Point(884, 266);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(52, 25);
-            this.label18.TabIndex = 116;
-            this.label18.Text = "OFF";
+            this.label17.Text = "Cabin 5 Lights";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label19.Location = new System.Drawing.Point(740, 266);
+            this.label19.Location = new System.Drawing.Point(303, 411);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(149, 25);
+            this.label19.Size = new System.Drawing.Size(137, 25);
             this.label19.TabIndex = 115;
-            this.label19.Text = "Cabin 4 Lights -";
-            // 
-            // axGlg8
-            // 
-            this.axGlg8.Enabled = true;
-            this.axGlg8.Location = new System.Drawing.Point(702, 263);
-            this.axGlg8.Name = "axGlg8";
-            this.axGlg8.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg8.OcxState")));
-            this.axGlg8.Size = new System.Drawing.Size(33, 32);
-            this.axGlg8.TabIndex = 114;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label20.Location = new System.Drawing.Point(884, 229);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(52, 25);
-            this.label20.TabIndex = 113;
-            this.label20.Text = "OFF";
+            this.label19.Text = "Cabin 4 Lights";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label21.Location = new System.Drawing.Point(740, 229);
+            this.label21.Location = new System.Drawing.Point(303, 374);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(149, 25);
+            this.label21.Size = new System.Drawing.Size(137, 25);
             this.label21.TabIndex = 112;
-            this.label21.Text = "Cabin 3 Lights -";
-            // 
-            // axGlg9
-            // 
-            this.axGlg9.Enabled = true;
-            this.axGlg9.Location = new System.Drawing.Point(702, 226);
-            this.axGlg9.Name = "axGlg9";
-            this.axGlg9.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg9.OcxState")));
-            this.axGlg9.Size = new System.Drawing.Size(33, 32);
-            this.axGlg9.TabIndex = 111;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label22.Location = new System.Drawing.Point(884, 191);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(52, 25);
-            this.label22.TabIndex = 110;
-            this.label22.Text = "OFF";
+            this.label21.Text = "Cabin 3 Lights";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label23.Location = new System.Drawing.Point(740, 191);
+            this.label23.Location = new System.Drawing.Point(303, 336);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(149, 25);
+            this.label23.Size = new System.Drawing.Size(137, 25);
             this.label23.TabIndex = 109;
-            this.label23.Text = "Cabin 2 Lights -";
-            // 
-            // axGlg10
-            // 
-            this.axGlg10.Enabled = true;
-            this.axGlg10.Location = new System.Drawing.Point(702, 188);
-            this.axGlg10.Name = "axGlg10";
-            this.axGlg10.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg10.OcxState")));
-            this.axGlg10.Size = new System.Drawing.Size(33, 32);
-            this.axGlg10.TabIndex = 108;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label24.Location = new System.Drawing.Point(884, 151);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(52, 25);
-            this.label24.TabIndex = 107;
-            this.label24.Text = "OFF";
+            this.label23.Text = "Cabin 2 Lights";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label25.Location = new System.Drawing.Point(740, 151);
+            this.label25.Location = new System.Drawing.Point(303, 296);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(149, 25);
+            this.label25.Size = new System.Drawing.Size(137, 25);
             this.label25.TabIndex = 106;
-            this.label25.Text = "Cabin 1 Lights -";
-            // 
-            // axGlg11
-            // 
-            this.axGlg11.Enabled = true;
-            this.axGlg11.Location = new System.Drawing.Point(702, 148);
-            this.axGlg11.Name = "axGlg11";
-            this.axGlg11.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg11.OcxState")));
-            this.axGlg11.Size = new System.Drawing.Size(33, 32);
-            this.axGlg11.TabIndex = 105;
+            this.label25.Text = "Cabin 1 Lights";
             // 
             // screenLabel
             // 
@@ -697,26 +576,26 @@ namespace BulletTrainGUI
             this.screenLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.screenLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 27F);
             this.screenLabel.ForeColor = System.Drawing.Color.Lime;
-            this.screenLabel.Location = new System.Drawing.Point(197, 33);
+            this.screenLabel.Location = new System.Drawing.Point(189, 36);
             this.screenLabel.Name = "screenLabel";
-            this.screenLabel.Size = new System.Drawing.Size(223, 40);
+            this.screenLabel.Size = new System.Drawing.Size(237, 40);
             this.screenLabel.TabIndex = 120;
-            this.screenLabel.Text = "Check Brake";
+            this.screenLabel.Text = "Check brakes";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.screenLabel);
-            this.panel1.Location = new System.Drawing.Point(610, 348);
+            this.panel1.Location = new System.Drawing.Point(532, 347);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(629, 115);
+            this.panel1.Size = new System.Drawing.Size(615, 115);
             this.panel1.TabIndex = 121;
             // 
             // axGlg12
             // 
             this.axGlg12.Enabled = true;
-            this.axGlg12.Location = new System.Drawing.Point(292, 64);
+            this.axGlg12.Location = new System.Drawing.Point(434, 79);
             this.axGlg12.Name = "axGlg12";
             this.axGlg12.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg12.OcxState")));
             this.axGlg12.Size = new System.Drawing.Size(138, 57);
@@ -725,62 +604,157 @@ namespace BulletTrainGUI
             // axGlg13
             // 
             this.axGlg13.Enabled = true;
-            this.axGlg13.Location = new System.Drawing.Point(292, 141);
+            this.axGlg13.Location = new System.Drawing.Point(434, 156);
             this.axGlg13.Name = "axGlg13";
             this.axGlg13.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg13.OcxState")));
             this.axGlg13.Size = new System.Drawing.Size(138, 57);
             this.axGlg13.TabIndex = 123;
+            // 
+            // speedMeter
+            // 
+            this.speedMeter.Enabled = true;
+            this.speedMeter.Location = new System.Drawing.Point(895, 515);
+            this.speedMeter.Name = "speedMeter";
+            this.speedMeter.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("speedMeter.OcxState")));
+            this.speedMeter.Size = new System.Drawing.Size(205, 194);
+            this.speedMeter.TabIndex = 124;
+            // 
+            // axGlg15
+            // 
+            this.axGlg15.Enabled = true;
+            this.axGlg15.Location = new System.Drawing.Point(1181, 347);
+            this.axGlg15.Name = "axGlg15";
+            this.axGlg15.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGlg15.OcxState")));
+            this.axGlg15.Size = new System.Drawing.Size(183, 492);
+            this.axGlg15.TabIndex = 125;
+            // 
+            // longitudeLabel
+            // 
+            this.longitudeLabel.AutoSize = true;
+            this.longitudeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.longitudeLabel.Location = new System.Drawing.Point(21, 503);
+            this.longitudeLabel.Name = "longitudeLabel";
+            this.longitudeLabel.Size = new System.Drawing.Size(129, 29);
+            this.longitudeLabel.TabIndex = 126;
+            this.longitudeLabel.Text = "Longitude";
+            // 
+            // latitudeLabel
+            // 
+            this.latitudeLabel.AutoSize = true;
+            this.latitudeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.latitudeLabel.Location = new System.Drawing.Point(214, 503);
+            this.latitudeLabel.Name = "latitudeLabel";
+            this.latitudeLabel.Size = new System.Drawing.Size(106, 29);
+            this.latitudeLabel.TabIndex = 127;
+            this.latitudeLabel.Text = "Latitude";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label26.Location = new System.Drawing.Point(859, 269);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(60, 26);
+            this.label26.TabIndex = 128;
+            this.label26.Text = "        ";
+            // 
+            // lightSwitch1
+            // 
+            this.lightSwitch1.Enabled = true;
+            this.lightSwitch1.Location = new System.Drawing.Point(441, 295);
+            this.lightSwitch1.Name = "lightSwitch1";
+            this.lightSwitch1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("lightSwitch1.OcxState")));
+            this.lightSwitch1.Size = new System.Drawing.Size(55, 27);
+            this.lightSwitch1.TabIndex = 129;
+            // 
+            // lightSwitch2
+            // 
+            this.lightSwitch2.Enabled = true;
+            this.lightSwitch2.Location = new System.Drawing.Point(441, 335);
+            this.lightSwitch2.Name = "lightSwitch2";
+            this.lightSwitch2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("lightSwitch2.OcxState")));
+            this.lightSwitch2.Size = new System.Drawing.Size(55, 27);
+            this.lightSwitch2.TabIndex = 130;
+            // 
+            // lightSwitch3
+            // 
+            this.lightSwitch3.Enabled = true;
+            this.lightSwitch3.Location = new System.Drawing.Point(441, 373);
+            this.lightSwitch3.Name = "lightSwitch3";
+            this.lightSwitch3.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("lightSwitch3.OcxState")));
+            this.lightSwitch3.Size = new System.Drawing.Size(55, 27);
+            this.lightSwitch3.TabIndex = 131;
+            // 
+            // lightSwitch4
+            // 
+            this.lightSwitch4.Enabled = true;
+            this.lightSwitch4.Location = new System.Drawing.Point(441, 410);
+            this.lightSwitch4.Name = "lightSwitch4";
+            this.lightSwitch4.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("lightSwitch4.OcxState")));
+            this.lightSwitch4.Size = new System.Drawing.Size(55, 27);
+            this.lightSwitch4.TabIndex = 132;
+            // 
+            // lightSwitch5
+            // 
+            this.lightSwitch5.Enabled = true;
+            this.lightSwitch5.Location = new System.Drawing.Point(441, 446);
+            this.lightSwitch5.Name = "lightSwitch5";
+            this.lightSwitch5.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("lightSwitch5.OcxState")));
+            this.lightSwitch5.Size = new System.Drawing.Size(55, 27);
+            this.lightSwitch5.TabIndex = 133;
             // 
             // TrainGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1488, 874);
+            this.ClientSize = new System.Drawing.Size(1385, 874);
+            this.Controls.Add(this.lightSwitch5);
+            this.Controls.Add(this.lightSwitch4);
+            this.Controls.Add(this.lightSwitch3);
+            this.Controls.Add(this.lightSwitch2);
+            this.Controls.Add(this.lightSwitch1);
+            this.Controls.Add(this.latitudeLabel);
+            this.Controls.Add(this.longitudeLabel);
+            this.Controls.Add(this.axGlg15);
+            this.Controls.Add(this.speedMeter);
             this.Controls.Add(this.axGlg13);
             this.Controls.Add(this.axGlg12);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.axGlg7);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.axGlg8);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.axGlg9);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.axGlg10);
             this.Controls.Add(this.label25);
-            this.Controls.Add(this.axGlg11);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.cabin5Label);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.axGlg6);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.cabin5Button);
+            this.Controls.Add(this.cabin4Label);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.axGlg5);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.cabin4Button);
+            this.Controls.Add(this.cabin3Label);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.axGlg4);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.cabin3Button);
+            this.Controls.Add(this.cabin2Label);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.axGlg3);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cabin2Button);
+            this.Controls.Add(this.cabin1Label);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.axGlg2);
+            this.Controls.Add(this.cabin1Button);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cameraLabel);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.axGlg1);
-            this.Controls.Add(this.currentLong);
-            this.Controls.Add(this.currentLat);
+            this.Controls.Add(this.cameraButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.radioLever);
             this.Controls.Add(this.currentMeter);
             this.Controls.Add(this.voltageMeter);
             this.Controls.Add(this.sysPowGauge);
-            this.Controls.Add(this.sysPowLabel);
             this.Controls.Add(this.fireIndicator);
             this.Controls.Add(this.sysPowIndicator);
             this.Controls.Add(this.currentLabel);
@@ -790,11 +764,8 @@ namespace BulletTrainGUI
             this.Controls.Add(this.kvLabel);
             this.Controls.Add(this.hzLabel);
             this.Controls.Add(this.percentLabel);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.label24);
+            this.Controls.Add(this.sysPowLabel);
+            this.Controls.Add(this.label26);
             this.Name = "TrainGUI";
             this.Text = "Bullet Train HMI";
             ((System.ComponentModel.ISupportInitialize)(this.mapLocation)).EndInit();
@@ -805,26 +776,26 @@ namespace BulletTrainGUI
             ((System.ComponentModel.ISupportInitialize)(this.currentMeter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioLever)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.currentLat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.currentLong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cameraButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axGlg11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cabin5Button)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cabin4Button)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cabin3Button)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cabin2Button)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cabin1Button)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axGlg12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axGlg13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.speedMeter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axGlg15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lightSwitch1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lightSwitch2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lightSwitch3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lightSwitch4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lightSwitch5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -847,50 +818,48 @@ namespace BulletTrainGUI
         private AxGlgoleLib.AxGlg radioButton;
         private AxGlgoleLib.AxGlg radioLever;
         private System.Windows.Forms.Label label1;
-        private AxGlgoleLib.AxGlg currentLat;
-        private AxGlgoleLib.AxGlg currentLong;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label cameraLabel;
         private System.Windows.Forms.Label label3;
-        private AxGlgoleLib.AxGlg axGlg1;
+        private AxGlgoleLib.AxGlg cameraButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label cabin5Label;
         private System.Windows.Forms.Label label15;
-        private AxGlgoleLib.AxGlg axGlg6;
-        private System.Windows.Forms.Label label12;
+        private AxGlgoleLib.AxGlg cabin5Button;
+        private System.Windows.Forms.Label cabin4Label;
         private System.Windows.Forms.Label label13;
-        private AxGlgoleLib.AxGlg axGlg5;
-        private System.Windows.Forms.Label label10;
+        private AxGlgoleLib.AxGlg cabin4Button;
+        private System.Windows.Forms.Label cabin3Label;
         private System.Windows.Forms.Label label11;
-        private AxGlgoleLib.AxGlg axGlg4;
-        private System.Windows.Forms.Label label8;
+        private AxGlgoleLib.AxGlg cabin3Button;
+        private System.Windows.Forms.Label cabin2Label;
         private System.Windows.Forms.Label label9;
-        private AxGlgoleLib.AxGlg axGlg3;
-        private System.Windows.Forms.Label label7;
+        private AxGlgoleLib.AxGlg cabin2Button;
+        private System.Windows.Forms.Label cabin1Label;
         private System.Windows.Forms.Label label6;
-        private AxGlgoleLib.AxGlg axGlg2;
-        private System.Windows.Forms.Label label16;
+        private AxGlgoleLib.AxGlg cabin1Button;
         private System.Windows.Forms.Label label17;
-        private AxGlgoleLib.AxGlg axGlg7;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private AxGlgoleLib.AxGlg axGlg8;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private AxGlgoleLib.AxGlg axGlg9;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
-        private AxGlgoleLib.AxGlg axGlg10;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
-        private AxGlgoleLib.AxGlg axGlg11;
         private System.Windows.Forms.Label screenLabel;
         private System.Windows.Forms.Panel panel1;
         private AxGlgoleLib.AxGlg axGlg12;
         private AxGlgoleLib.AxGlg axGlg13;
+        private AxGlgoleLib.AxGlg speedMeter;
+        private AxGlgoleLib.AxGlg axGlg15;
+        private System.Windows.Forms.Label longitudeLabel;
+        private System.Windows.Forms.Label latitudeLabel;
+        private System.Windows.Forms.Label label26;
+        private AxGlgoleLib.AxGlg lightSwitch1;
+        private AxGlgoleLib.AxGlg lightSwitch2;
+        private AxGlgoleLib.AxGlg lightSwitch3;
+        private AxGlgoleLib.AxGlg lightSwitch4;
+        private AxGlgoleLib.AxGlg lightSwitch5;
     }
 }
 
