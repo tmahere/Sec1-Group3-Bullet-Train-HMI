@@ -89,6 +89,7 @@ namespace BulletTrainGUI
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.mapLocation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sysPowIndicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fireIndicator)).BeginInit();
@@ -118,6 +119,7 @@ namespace BulletTrainGUI
             ((System.ComponentModel.ISupportInitialize)(this.doorSwitch3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorSwitch2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorSwitch1)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // mapLocation
@@ -484,8 +486,10 @@ namespace BulletTrainGUI
             // longitudeLabel
             // 
             this.longitudeLabel.AutoSize = true;
+            this.longitudeLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.longitudeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.longitudeLabel.Location = new System.Drawing.Point(21, 503);
+            this.longitudeLabel.ForeColor = System.Drawing.Color.Lime;
+            this.longitudeLabel.Location = new System.Drawing.Point(4, 5);
             this.longitudeLabel.Name = "longitudeLabel";
             this.longitudeLabel.Size = new System.Drawing.Size(129, 29);
             this.longitudeLabel.TabIndex = 126;
@@ -494,8 +498,10 @@ namespace BulletTrainGUI
             // latitudeLabel
             // 
             this.latitudeLabel.AutoSize = true;
+            this.latitudeLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.latitudeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.latitudeLabel.Location = new System.Drawing.Point(214, 503);
+            this.latitudeLabel.ForeColor = System.Drawing.Color.Lime;
+            this.latitudeLabel.Location = new System.Drawing.Point(240, 5);
             this.latitudeLabel.Name = "latitudeLabel";
             this.latitudeLabel.Size = new System.Drawing.Size(106, 29);
             this.latitudeLabel.TabIndex = 127;
@@ -703,12 +709,24 @@ namespace BulletTrainGUI
             this.label14.TabIndex = 150;
             this.label14.Text = "P";
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.latitudeLabel);
+            this.panel4.Controls.Add(this.longitudeLabel);
+            this.panel4.Location = new System.Drawing.Point(17, 497);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(482, 38);
+            this.panel4.TabIndex = 151;
+            // 
             // TrainGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1385, 874);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
@@ -727,8 +745,6 @@ namespace BulletTrainGUI
             this.Controls.Add(this.lightSwitch3);
             this.Controls.Add(this.lightSwitch2);
             this.Controls.Add(this.lightSwitch1);
-            this.Controls.Add(this.latitudeLabel);
-            this.Controls.Add(this.longitudeLabel);
             this.Controls.Add(this.driveLever);
             this.Controls.Add(this.speedMeter);
             this.Controls.Add(this.panel1);
@@ -797,6 +813,8 @@ namespace BulletTrainGUI
             ((System.ComponentModel.ISupportInitialize)(this.doorSwitch3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorSwitch2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorSwitch1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -861,6 +879,7 @@ namespace BulletTrainGUI
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel4;
     }
 }
 
