@@ -46,7 +46,7 @@ namespace BulletTrainGUI
             loopTimer.Interval = 500;
             loopTimer.Start();
         }
-        
+
         // move some items to separate timers depending on their rate of change, OR into a separate method if it takes in user input
         private void loopTimer_Tick(object sender, EventArgs e) // example on how to simulate random data by looping through an array
         {
@@ -56,7 +56,7 @@ namespace BulletTrainGUI
             float storedRand = sample[rand.Next(0,11)];
 
             // current meter
-            currentLabel.Text = storedRand.ToString();
+            currentLabel.Text = storedRand.ToString() + "Hz";
             currentMeter.SetDTag("Current", storedRand, true);
             currentMeter.Update();
 
@@ -74,6 +74,38 @@ namespace BulletTrainGUI
 
 
 
+            //radioLever.SetDTag("Position", radioStatus, true);
+            //label2.Text = "OFF";
+
+            //if (radioLever.GetDResource("Position") == 1)
+            //{
+            //    radioStatus = 1;
+            //    label2.Text = "OFF";
+            //}
+            //else if (radioLever.GetDResource("Position") == 0)
+            //{
+            //    radioStatus = 0;
+            //    label2.Text = "ON";
+            //}
+
+            //if (radioLever.GetSResource("Action") == "ValueChanged")
+            //{
+            //    if(radioLever.GetDTag("Position") == 1)
+            //    {
+            //        label2.Text = "OFF";
+            //        label2.Update();
+            //    }
+            //    else if(radioLever.GetDTag("Position") == 0)
+            //    {
+            //        label2.Text = "ON";
+            //        label2.Update();
+            //    }
+            //}
+  
+
+
+            //radioLever.SetDResource("Position", 0);
+
             // longitude
             //longitudeLabel.Text = longitude; //data sent in shouold be string format
 
@@ -83,10 +115,6 @@ namespace BulletTrainGUI
             // mapLocation
             //mapLocation.SetDTag("Location", location, true);
             //mapLocation.Update();
-
-            // radioLever.SetDTag("Position", radioStatus, true);
-
-
 
             // speed meter
             //speedMeter.SetDTag("Speed", speed, true);
@@ -149,6 +177,11 @@ namespace BulletTrainGUI
         }
 
         private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sysPowIndicator_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e)
         {
 
         }

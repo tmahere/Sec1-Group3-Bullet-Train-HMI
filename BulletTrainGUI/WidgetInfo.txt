@@ -10,8 +10,12 @@ Meter used to measure voltage
 button3 - stop
 [unused] red button that says "stop"
 
+button7
+used as the "increase" button for temperature
+
 button8
 used as the radio "talk" button, does nothing
+used as the "decrease" button for temperature
 
 button11 - red = dark red-"Off" bright red-"On"
 Used as the fire indicator
@@ -38,7 +42,7 @@ spinner10
 [unused] Old temperature dial/adjuster
 
 switch3 = "Position"
-USed as the ON/OFF switch for the radio
+Used as the ON/OFF switch for the radio
 0 = ON
 1 = OFF
 
