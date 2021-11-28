@@ -13,7 +13,7 @@ namespace BulletTrainHMI
         }
         public float Get_Current()
         {
-            string path = @"C:\Users\dom17\Desktop\PROJ3-Bullet-Train\tmahere\Sec1-Group3-Bullet-Train-HMI\BulletTrainHMI\current ratings.txt";
+            string path = @"G:\Lisa\Documents\Bullet_Train_HMI\BulletTrainHMI\current ratings.txt";
             try
             {
                 using (StreamReader FILE = new StreamReader(path)) // file location will change accordingly when the module is integrated

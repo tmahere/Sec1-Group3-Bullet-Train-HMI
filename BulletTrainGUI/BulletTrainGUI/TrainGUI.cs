@@ -11,6 +11,8 @@ using GlgoleLib;
 using GenLogic;
 using System.Windows.Forms;
 
+using BulletTrainHMI;
+
 // don't change any of the method names because the form WILL break
 // to change it you must change the widget's name in properties FIRST then the method name
 
@@ -57,18 +59,18 @@ namespace BulletTrainGUI
         }
 
         // move some items to separate timers depending on their rate of change, OR into a separate method if it takes in user input
-        public void loopTimer_Tick(object sender, EventArgs e) // example on how to simulate random data by looping through an array 
+        public void loopTimer_Tick(object sender, EventArgs e)
         {
-            float[] sample = { 40.3f, 41.2f, 41.6f, 42.4f, 45.1f, 44.7f, 43.9f, 43.2f, 41.7f, 41.9f, 41.6f };
-            Random rand = new Random();
-            
-            float current = sample[rand.Next(0, 11)];
+            BulletTrainHMI.System_Power sysPow = new BulletTrainHMI.System_Power(); // initialize class
+
+            float current = sysPow.Get_System_Current();
+            float voltage = sysPow.Get_System_Voltage();
 
             // current meter
             currentLabel.Text = current.ToString() + "Hz";
             currentMeter.SetDTag("Current", current, true);
 
-            if(current > 44)
+            if(current > 52)
             {
                 currentLabel.ForeColor = Color.Red;
             }
@@ -77,14 +79,14 @@ namespace BulletTrainGUI
 
             currentMeter.Update();
 
+            // voltage meter
+            voltageLabel.Text = voltage.ToString() + "%";
+            voltageMeter.SetDTag("Voltage", voltage, true);
+            voltageMeter.Update();
+
             //driveLever.SetDTag("Position", changeLabel(), true); // sets the driver lever to random movements
             //driveLever.Update();
 
-
-            // voltage meter
-            //voltageLabel.Text = storedRand.ToString();
-            //voltageMeter.SetDTag("Voltage", storedRand, true);
-            //voltageMeter.Update();
 
             // system power meter
             //sysPowLabel.Text = power.ToString();

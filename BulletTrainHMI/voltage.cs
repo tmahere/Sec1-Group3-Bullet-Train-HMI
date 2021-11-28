@@ -18,7 +18,7 @@ namespace BulletTrainHMI
 
         public float Get_Voltage()          // gets the voltage reading from voltage rating file
         {
-            string path = @"C:\Users\dom17\Desktop\PROJ3-Bullet-Train\tmahere\Sec1-Group3-Bullet-Train-HMI\BulletTrainHMI\voltage ratings.txt";
+            string path = @"G:\Lisa\Documents\Bullet_Train_HMI\BulletTrainHMI\voltage ratings.txt";
             try
             {
                 using (StreamReader FILE = new StreamReader(path)) // file location will change accordingly when the module is integrated
