@@ -11,6 +11,6 @@ namespace BulletTrainHMI
     /// </summary>
     interface ComponentManager
     {
-        public void readData(int line);
+        void readData(int line);
     }
 }

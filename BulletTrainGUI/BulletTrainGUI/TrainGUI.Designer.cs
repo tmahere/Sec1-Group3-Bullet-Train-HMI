@@ -75,7 +75,7 @@ namespace BulletTrainGUI
             this.lightSwitch4 = new AxGlgoleLib.AxGlg();
             this.lightSwitch5 = new AxGlgoleLib.AxGlg();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.currentTemp = new System.Windows.Forms.Label();
             this.tempInc = new AxGlgoleLib.AxGlg();
             this.tempDec = new AxGlgoleLib.AxGlg();
             this.doorSwitch5 = new AxGlgoleLib.AxGlg();
@@ -582,23 +582,23 @@ namespace BulletTrainGUI
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.currentTemp);
             this.panel2.Location = new System.Drawing.Point(443, 77);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(131, 108);
             this.panel2.TabIndex = 138;
             // 
-            // label7
+            // currentTemp
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F);
-            this.label7.ForeColor = System.Drawing.Color.Lime;
-            this.label7.Location = new System.Drawing.Point(17, 36);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 39);
-            this.label7.TabIndex = 135;
-            this.label7.Text = "20°C";
+            this.currentTemp.AutoSize = true;
+            this.currentTemp.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.currentTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F);
+            this.currentTemp.ForeColor = System.Drawing.Color.Lime;
+            this.currentTemp.Location = new System.Drawing.Point(17, 36);
+            this.currentTemp.Name = "currentTemp";
+            this.currentTemp.Size = new System.Drawing.Size(94, 39);
+            this.currentTemp.TabIndex = 135;
+            this.currentTemp.Text = "20°C";
             // 
             // tempInc
             // 
@@ -608,6 +608,7 @@ namespace BulletTrainGUI
             this.tempInc.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("tempInc.OcxState")));
             this.tempInc.Size = new System.Drawing.Size(55, 50);
             this.tempInc.TabIndex = 140;
+            this.tempInc.Input += new AxGlgoleLib._DGlgEvents_InputEventHandler(this.tempInc_Input);
             // 
             // tempDec
             // 
@@ -931,7 +932,7 @@ namespace BulletTrainGUI
         private AxGlgoleLib.AxGlg lightSwitch4;
         private AxGlgoleLib.AxGlg lightSwitch5;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label currentTemp;
         private AxGlgoleLib.AxGlg tempInc;
         private AxGlgoleLib.AxGlg tempDec;
         private AxGlgoleLib.AxGlg doorSwitch5;

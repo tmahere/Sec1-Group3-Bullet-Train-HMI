@@ -10,7 +10,7 @@ namespace BulletTrainHMI
     /// <summary>
     /// Reads and manages temperature data
     /// </summary>
-    class TempManager:ComponentManager
+    public class TempManager:ComponentManager
     {
         string filePath;//datafile path
         float destTemp;//desired temeprature for air conditioner

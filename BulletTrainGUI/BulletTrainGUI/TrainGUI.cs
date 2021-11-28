@@ -42,6 +42,7 @@ namespace BulletTrainGUI
 {
     public partial class TrainGUI : Form
     {
+        float temperature;
         public TrainGUI()
         {
             InitializeComponent();
@@ -53,8 +54,7 @@ namespace BulletTrainGUI
 
         private void systemStartup_Tick(object sender, EventArgs e)
         {
-            //BulletTrainHMI.System_Power sysPow = new BulletTrainHMI.System_Power(); // initialize class
-            //float power = sysPow.Get_System_Pantograph();
+            internalMon();
 
             string path = @"G:\Lisa\Documents\Bullet_Train_HMI\BulletTrainHMI\power sequence.txt";
             int lines = File.ReadLines(path).Count();
@@ -127,35 +127,31 @@ namespace BulletTrainGUI
             else
                 voltageLabel.ForeColor = Color.Lime;
 
-            //////////////////////////
-            
-            // speed meter
-            //speedMeter.SetDTag("Speed", speed, true);
-            //speedMeter.Update();
+                //////////////////////////
+
+                // speed meter
+                //speedMeter.SetDTag("Speed", speed, true);
+                //speedMeter.Update();
 
 
 
-            // screen label - get it to center to panel1
-            //screenLabel.Text = enterTextHere();
+                // screen label - get it to center to panel1
+                //screenLabel.Text = enterTextHere();
 
-            // driving
+                // driving
 
-             //driveLever.SetDTag("Position", changeLabel(), true); // sets the driver lever to random movements
-            //driveLever.Update();
+                //driveLever.SetDTag("Position", changeLabel(), true); // sets the driver lever to random movements
+                //driveLever.Update();
 
 
-            // camera button - if off, have picture 1 and 2 off too (colour underneath is black, so set image to false??)
+                // camera button - if off, have picture 1 and 2 off too (colour underneath is black, so set image to false??)
 
-            // pictureBox1
+                // pictureBox1
 
-            // picturebox2
+                // picturebox2
 
-            //fireIndicator
-
-            // temperature
-            //currentTemp
-            //desiredTemp
-        }
+                //fireIndicator
+            }
 
         private void colourCheck_Tick(object sender, EventArgs e) // changes the colour of the drive lever labels
         {
@@ -200,36 +196,41 @@ namespace BulletTrainGUI
             {
                 locationTimer.Stop();
             }
-        }
 
-        private void voltageLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void currentLabel_Click(object sender, EventArgs e)
-        {
+            //////
             
+            BulletTrainHMI.TempManager temp = new BulletTrainHMI.TempManager(@"G:\Lisa\Documents\Bullet_Train_HMI\BulletTrainHMI\tempData.txt"); // temperature increase and decrease
+
+            if (tempInc.GetDTag("Pressed") == 1)
+            {
+                currentTemp.Text = (temperature + 1).ToString() + "°C";
+                temperature++;
+            }
+            else if (tempDec.GetDTag("Pressed") == 1)
+            {
+                currentTemp.Text = (temperature - 1).ToString() + "°C";
+                temperature--;
+            }
         }
 
-        private void currentMeter_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e)
+        private void voltageLabel_Click(object sender, EventArgs e) {}
+
+        private void currentLabel_Click(object sender, EventArgs e){}
+
+        private void currentMeter_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e){}
+
+        private void label17_Click(object sender, EventArgs e){}
+
+        private void sysPowIndicator_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e){}
+
+        private void TrainGUI_Load(object sender, EventArgs e){}
+
+        private void internalMon()
         {
-            
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sysPowIndicator_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e)
-        {
-
-        }
-
-        private void TrainGUI_Load(object sender, EventArgs e)
-        {
-
+            // temperature initialization
+            BulletTrainHMI.TempManager temp = new BulletTrainHMI.TempManager(@"G:\Lisa\Documents\Bullet_Train_HMI\BulletTrainHMI\tempData.txt");
+            temperature = temp.getTemperature();
+            currentTemp.Text = temperature.ToString() + "°C";
         }
 
         private void cameraButton_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e) // turns the cameras on and off
@@ -311,10 +312,8 @@ namespace BulletTrainGUI
 
             // latitude
             latitudeLabel.Text = gps.getLatitude(); //data sent in shouold be string format
-
-            // mapLocation
-            //mapLocation.SetDTag("Location", location, true);
-            //mapLocation.Update();
         }
+
+        private void tempInc_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e){}
     }
 }
