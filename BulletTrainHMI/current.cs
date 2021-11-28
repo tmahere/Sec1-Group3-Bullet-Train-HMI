@@ -14,6 +14,7 @@ namespace BulletTrainHMI
         public float Get_Current()
         {
             string path = @"G:\Lisa\Documents\Bullet_Train_HMI\BulletTrainHMI\current ratings.txt";
+            //string path = Path.Combine(Environment.CurrentDirectory, @"Data\", "current ratings.txt"); // does not work atm, gets the directory of the GUI
             try
             {
                 using (StreamReader FILE = new StreamReader(path)) // file location will change accordingly when the module is integrated

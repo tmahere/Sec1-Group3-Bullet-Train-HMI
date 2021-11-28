@@ -94,6 +94,7 @@ namespace BulletTrainGUI
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.systemStartup = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mapLocation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sysPowIndicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fireIndicator)).BeginInit();
@@ -720,6 +721,7 @@ namespace BulletTrainGUI
             this.allLightSwitch.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("allLightSwitch.OcxState")));
             this.allLightSwitch.Size = new System.Drawing.Size(55, 27);
             this.allLightSwitch.TabIndex = 153;
+            this.allLightSwitch.Input += new AxGlgoleLib._DGlgEvents_InputEventHandler(this.allLightSwitch_Input);
             // 
             // colourCheck
             // 
@@ -739,9 +741,9 @@ namespace BulletTrainGUI
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.sysPowLabel);
-            this.panel3.Location = new System.Drawing.Point(864, 264);
+            this.panel3.Location = new System.Drawing.Point(852, 264);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(57, 32);
+            this.panel3.Size = new System.Drawing.Size(83, 32);
             this.panel3.TabIndex = 155;
             // 
             // panel5
@@ -763,6 +765,10 @@ namespace BulletTrainGUI
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(131, 32);
             this.panel6.TabIndex = 157;
+            // 
+            // systemStartup
+            // 
+            this.systemStartup.Tick += new System.EventHandler(this.systemStartup_Tick);
             // 
             // TrainGUI
             // 
@@ -936,6 +942,7 @@ namespace BulletTrainGUI
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Timer systemStartup;
     }
 }
 

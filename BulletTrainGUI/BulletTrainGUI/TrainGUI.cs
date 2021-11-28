@@ -45,17 +45,41 @@ namespace BulletTrainGUI
         public TrainGUI()
         {
             InitializeComponent();
+            systemStartup.Start();
             loopTimer.Interval = 500;
             loopTimer.Start();
             colourCheck.Start();
         }
 
-        public int changeLabel()
+        private void systemStartup_Tick(object sender, EventArgs e)
         {
-            Random rand = new Random();
-            int num = rand.Next(0, 3);
+            //BulletTrainHMI.System_Power sysPow = new BulletTrainHMI.System_Power(); // initialize class
+            //float power = sysPow.Get_System_Pantograph();
 
-            return num;
+            string path = @"G:\Lisa\Documents\Bullet_Train_HMI\BulletTrainHMI\power sequence.txt";
+            int lines = File.ReadLines(path).Count();
+
+            StreamReader FILE = new StreamReader(path);
+            // system power meter
+            for (int i = 0; i < lines; i++)
+            {
+                string power = FILE.ReadLine();
+                sysPowLabel.Text = power;
+                sysPowGauge.SetDTag("Power", float.Parse(power), true);
+                sysPowGauge.Update();
+
+                if (float.Parse(power) == 100) // if the number reaches 100 then the button turns on
+                {
+                    sysPowIndicator.SetDTag("Position", 1, true);
+                    sysPowIndicator.Update();
+                }
+                else
+                {
+                    sysPowIndicator.SetDTag("Position", 0, true);
+                    sysPowIndicator.Update();
+                }
+            }
+            systemStartup.Stop();
         }
 
         // move some items to separate timers depending on their rate of change, OR into a separate method if it takes in user input
@@ -80,22 +104,21 @@ namespace BulletTrainGUI
             currentMeter.Update();
 
             // voltage meter
-            voltageLabel.Text = voltage.ToString() + "%";
+            voltageLabel.Text = voltage.ToString() + "kV";
             voltageMeter.SetDTag("Voltage", voltage, true);
             voltageMeter.Update();
 
+            if (voltage > 52)
+            {
+                voltageLabel.ForeColor = Color.Red;
+            }
+            else
+                voltageLabel.ForeColor = Color.Lime;
+
+
+
             //driveLever.SetDTag("Position", changeLabel(), true); // sets the driver lever to random movements
             //driveLever.Update();
-
-
-            // system power meter
-            //sysPowLabel.Text = power.ToString();
-            //sysPowGauge.SetDTag("Power", power, true);
-            //sysPowGauge.Update();
-
-            // system power indicator
-
-
 
             //radioLever.SetDTag("Position", radioStatus, true);
             //label2.Text = "OFF";
@@ -124,7 +147,7 @@ namespace BulletTrainGUI
             //        label2.Update();
             //    }
             //}
-  
+
 
 
             //radioLever.SetDResource("Position", 0);
@@ -260,7 +283,7 @@ namespace BulletTrainGUI
             }
             else
             {
-                cameraLabel.Text = "OON";
+                cameraLabel.Text = "ON";
                 pictureBox1.Show();
                 pictureBox2.Show();
             }
@@ -293,5 +316,32 @@ namespace BulletTrainGUI
             doorSwitch4.Update();
             doorSwitch5.Update();
         }
+
+        private void allLightSwitch_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e)
+        {
+            if (allLightSwitch.GetDTag("Position") == 0) // if all lights switch is turned OFF, turn all other switches off
+            {
+                lightSwitch1.SetDTag("Position", 0, true);
+                lightSwitch2.SetDTag("Position", 0, true);
+                lightSwitch3.SetDTag("Position", 0, true);
+                lightSwitch4.SetDTag("Position", 0, true);
+                lightSwitch5.SetDTag("Position", 0, true);
+            }
+            else if (allLightSwitch.GetDTag("Position") == 1)
+            {
+                lightSwitch1.SetDTag("Position", 1, true);
+                lightSwitch2.SetDTag("Position", 1, true);
+                lightSwitch3.SetDTag("Position", 1, true);
+                lightSwitch4.SetDTag("Position", 1, true);
+                lightSwitch5.SetDTag("Position", 1, true);
+            }
+
+            lightSwitch1.Update();
+            lightSwitch2.Update();
+            lightSwitch3.Update();
+            lightSwitch4.Update();
+            lightSwitch5.Update();
+        }
+
     }
 }
