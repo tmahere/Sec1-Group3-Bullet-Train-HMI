@@ -568,9 +568,9 @@ namespace BulletTrainGUI
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(443, 41);
+            this.panel2.Location = new System.Drawing.Point(443, 77);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(131, 170);
+            this.panel2.Size = new System.Drawing.Size(131, 108);
             this.panel2.TabIndex = 138;
             // 
             // label7
@@ -579,7 +579,7 @@ namespace BulletTrainGUI
             this.label7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F);
             this.label7.ForeColor = System.Drawing.Color.Lime;
-            this.label7.Location = new System.Drawing.Point(17, 66);
+            this.label7.Location = new System.Drawing.Point(17, 36);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 39);
             this.label7.TabIndex = 135;
@@ -588,7 +588,7 @@ namespace BulletTrainGUI
             // tempInc
             // 
             this.tempInc.Enabled = true;
-            this.tempInc.Location = new System.Drawing.Point(451, 217);
+            this.tempInc.Location = new System.Drawing.Point(451, 192);
             this.tempInc.Name = "tempInc";
             this.tempInc.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("tempInc.OcxState")));
             this.tempInc.Size = new System.Drawing.Size(55, 50);
@@ -597,7 +597,7 @@ namespace BulletTrainGUI
             // tempDec
             // 
             this.tempDec.Enabled = true;
-            this.tempDec.Location = new System.Drawing.Point(512, 217);
+            this.tempDec.Location = new System.Drawing.Point(512, 192);
             this.tempDec.Name = "tempDec";
             this.tempDec.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("tempDec.OcxState")));
             this.tempDec.Size = new System.Drawing.Size(55, 50);
