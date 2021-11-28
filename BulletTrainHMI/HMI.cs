@@ -7,7 +7,7 @@ using DrivingModule;
 
 
 
-namespace BulletHMI
+namespace BulletTrainHMI
 {
     class HMI
     {
@@ -20,10 +20,10 @@ namespace BulletHMI
             bool speedChange;
             float[] displaySpeed = new float[5] { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };
 
-            BrakeQuality trainQuality = new();
-            SpeedChange trainSpeed = new();
-            Brake trainBrake = new();
-            DriveMode trainDrive = new();
+            BrakeQuality trainQuality = new BrakeQuality();
+            SpeedChange trainSpeed = new SpeedChange();
+            Brake trainBrake = new Brake();
+            DriveMode trainDrive = new DriveMode();
 
 
             // loops needed for each if statement so user can continously make drive changes as well as displaying drive mode and brake quality 

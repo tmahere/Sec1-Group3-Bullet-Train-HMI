@@ -130,7 +130,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\BulletTrainHMI\BulletTrainHMI.csproj">
-      <Project>{5b74b6a1-becc-4d46-971b-09fab0780b33}</Project>
+      <Project>{22390157-ffd7-4aa1-a494-68447827ba4b}</Project>
       <Name>BulletTrainHMI</Name>
     </ProjectReference>
   </ItemGroup>
