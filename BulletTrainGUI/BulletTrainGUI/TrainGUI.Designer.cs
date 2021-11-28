@@ -91,6 +91,9 @@ namespace BulletTrainGUI
             this.allLightSwitch = new AxGlgoleLib.AxGlg();
             this.colourCheck = new System.Windows.Forms.Timer(this.components);
             this.doorSwitch1 = new AxGlgoleLib.AxGlg();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.mapLocation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sysPowIndicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fireIndicator)).BeginInit();
@@ -122,6 +125,9 @@ namespace BulletTrainGUI
             ((System.ComponentModel.ISupportInitialize)(this.allDoorSwitch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.allLightSwitch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorSwitch1)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // mapLocation
@@ -140,9 +146,10 @@ namespace BulletTrainGUI
             // voltageLabel
             // 
             this.voltageLabel.AutoSize = true;
-            this.voltageLabel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.voltageLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.voltageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.voltageLabel.Location = new System.Drawing.Point(1057, 269);
+            this.voltageLabel.ForeColor = System.Drawing.Color.Lime;
+            this.voltageLabel.Location = new System.Drawing.Point(25, 1);
             this.voltageLabel.Name = "voltageLabel";
             this.voltageLabel.Size = new System.Drawing.Size(86, 26);
             this.voltageLabel.TabIndex = 17;
@@ -152,9 +159,10 @@ namespace BulletTrainGUI
             // currentLabel
             // 
             this.currentLabel.AutoSize = true;
-            this.currentLabel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.currentLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.currentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.currentLabel.Location = new System.Drawing.Point(1253, 269);
+            this.currentLabel.ForeColor = System.Drawing.Color.Lime;
+            this.currentLabel.Location = new System.Drawing.Point(23, 0);
             this.currentLabel.Name = "currentLabel";
             this.currentLabel.Size = new System.Drawing.Size(87, 26);
             this.currentLabel.TabIndex = 18;
@@ -183,9 +191,10 @@ namespace BulletTrainGUI
             // sysPowLabel
             // 
             this.sysPowLabel.AutoSize = true;
-            this.sysPowLabel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.sysPowLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.sysPowLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.sysPowLabel.Location = new System.Drawing.Point(872, 269);
+            this.sysPowLabel.ForeColor = System.Drawing.Color.Lime;
+            this.sysPowLabel.Location = new System.Drawing.Point(8, 1);
             this.sysPowLabel.Name = "sysPowLabel";
             this.sysPowLabel.Size = new System.Drawing.Size(44, 26);
             this.sysPowLabel.TabIndex = 28;
@@ -242,7 +251,7 @@ namespace BulletTrainGUI
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(740, 84);
+            this.label1.Location = new System.Drawing.Point(740, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 31);
             this.label1.TabIndex = 41;
@@ -515,7 +524,7 @@ namespace BulletTrainGUI
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label26.Location = new System.Drawing.Point(859, 269);
+            this.label26.Location = new System.Drawing.Point(859, 265);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(0, 26);
             this.label26.TabIndex = 128;
@@ -725,12 +734,45 @@ namespace BulletTrainGUI
             this.doorSwitch1.Size = new System.Drawing.Size(55, 27);
             this.doorSwitch1.TabIndex = 154;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.sysPowLabel);
+            this.panel3.Location = new System.Drawing.Point(864, 264);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(57, 32);
+            this.panel3.TabIndex = 155;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.voltageLabel);
+            this.panel5.Location = new System.Drawing.Point(1033, 265);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(131, 32);
+            this.panel5.TabIndex = 156;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.currentLabel);
+            this.panel6.Location = new System.Drawing.Point(1229, 263);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(131, 32);
+            this.panel6.TabIndex = 157;
+            // 
             // TrainGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1385, 874);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.doorSwitch1);
             this.Controls.Add(this.allLightSwitch);
             this.Controls.Add(this.allDoorSwitch);
@@ -779,11 +821,8 @@ namespace BulletTrainGUI
             this.Controls.Add(this.sysPowGauge);
             this.Controls.Add(this.fireIndicator);
             this.Controls.Add(this.sysPowIndicator);
-            this.Controls.Add(this.currentLabel);
-            this.Controls.Add(this.voltageLabel);
             this.Controls.Add(this.radioButton);
             this.Controls.Add(this.mapLocation);
-            this.Controls.Add(this.sysPowLabel);
             this.Controls.Add(this.label26);
             this.Name = "TrainGUI";
             this.Text = "Bullet Train HMI";
@@ -822,6 +861,12 @@ namespace BulletTrainGUI
             ((System.ComponentModel.ISupportInitialize)(this.allDoorSwitch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.allLightSwitch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorSwitch1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -888,6 +933,9 @@ namespace BulletTrainGUI
         private AxGlgoleLib.AxGlg allLightSwitch;
         private System.Windows.Forms.Timer colourCheck;
         private AxGlgoleLib.AxGlg doorSwitch1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
     }
 }
 

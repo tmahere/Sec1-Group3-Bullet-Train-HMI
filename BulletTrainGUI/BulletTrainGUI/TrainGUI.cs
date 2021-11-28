@@ -67,6 +67,14 @@ namespace BulletTrainGUI
             // current meter
             currentLabel.Text = current.ToString() + "Hz";
             currentMeter.SetDTag("Current", current, true);
+
+            if(current > 44)
+            {
+                currentLabel.ForeColor = Color.Red;
+            }
+            else
+                currentLabel.ForeColor = Color.Lime;
+
             currentMeter.Update();
 
             //driveLever.SetDTag("Position", changeLabel(), true); // sets the driver lever to random movements
