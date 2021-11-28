@@ -18,12 +18,13 @@ namespace BulletTrainHMI
 
         public float Get_Voltage()          // gets the voltage reading from voltage rating file
         {
+            string path = @"C:\Users\dom17\Desktop\PROJ3-Bullet-Train\tmahere\Sec1-Group3-Bullet-Train-HMI\BulletTrainHMI\voltage ratings.txt";
             try
             {
-                using (StreamReader FILE = new StreamReader(@"C:\Users\dom17\Desktop\PROJ3-Bullet-Train\tmahere\Sec1-Group3-Bullet-Train-HMI\BulletTrainHMI\voltage ratings.txt")) // file location will change accordingly when the module is integrated
+                using (StreamReader FILE = new StreamReader(path)) // file location will change accordingly when the module is integrated
                 {
                     Random rnd = new Random();              // random number generator used to create a line index to read from
-                    int lineIndex = rnd.Next(1, File.ReadLines(@"C:\Users\dom17\Desktop\PROJ3-Bullet-Train\tmahere\Sec1-Group3-Bullet-Train-HMI\BulletTrainHMI\voltage ratings.txt").Count());
+                    int lineIndex = rnd.Next(1, File.ReadLines(path).Count());
                     for (int a = 1; a < lineIndex; a++)
                     {                                       // this loop will read through the file until it reaches the line index that was created by rnd  
                         FILE.ReadLine();
