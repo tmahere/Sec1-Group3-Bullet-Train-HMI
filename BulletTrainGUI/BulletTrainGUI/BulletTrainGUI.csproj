@@ -128,5 +128,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BulletTrainHMI\BulletTrainHMI.csproj">
+      <Project>{5b74b6a1-becc-4d46-971b-09fab0780b33}</Project>
+      <Name>BulletTrainHMI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

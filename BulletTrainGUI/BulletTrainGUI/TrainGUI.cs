@@ -45,20 +45,33 @@ namespace BulletTrainGUI
             InitializeComponent();
             loopTimer.Interval = 500;
             loopTimer.Start();
+            colourCheck.Start();
+        }
+
+        public int changeLabel()
+        {
+            Random rand = new Random();
+            int num = rand.Next(0, 3);
+
+            return num;
         }
 
         // move some items to separate timers depending on their rate of change, OR into a separate method if it takes in user input
-        private void loopTimer_Tick(object sender, EventArgs e) // example on how to simulate random data by looping through an array
+        public void loopTimer_Tick(object sender, EventArgs e) // example on how to simulate random data by looping through an array 
         {
             float[] sample = { 40.3f, 41.2f, 41.6f, 42.4f, 45.1f, 44.7f, 43.9f, 43.2f, 41.7f, 41.9f, 41.6f };
             Random rand = new Random();
-
-            float storedRand = sample[rand.Next(0,11)];
+            
+            float current = sample[rand.Next(0, 11)];
 
             // current meter
-            currentLabel.Text = storedRand.ToString() + "Hz";
-            currentMeter.SetDTag("Current", storedRand, true);
+            currentLabel.Text = current.ToString() + "Hz";
+            currentMeter.SetDTag("Current", current, true);
             currentMeter.Update();
+
+            //driveLever.SetDTag("Position", changeLabel(), true); // sets the driver lever to random movements
+            //driveLever.Update();
+
 
             // voltage meter
             //voltageLabel.Text = storedRand.ToString();
@@ -161,6 +174,42 @@ namespace BulletTrainGUI
             //desiredTemp
         }
 
+        private void colourCheck_Tick(object sender, EventArgs e) // changes the colour of the drive lever labels
+        {
+            if (driveLever.GetDTag("Position") == 0) // p
+            {
+                pLabel.ForeColor = Color.Cyan;
+
+                rLabel.ForeColor = Color.Black;
+                nLabel.ForeColor = Color.Black;
+                dLabel.ForeColor = Color.Black;
+            }
+            else if (driveLever.GetDTag("Position") == 1) // r
+            {
+                rLabel.ForeColor = Color.Cyan;
+
+                pLabel.ForeColor = Color.Black;
+                nLabel.ForeColor = Color.Black;
+                dLabel.ForeColor = Color.Black;
+            }
+            else if (driveLever.GetDTag("Position") == 2) // n
+            {
+                nLabel.ForeColor = Color.Cyan;
+
+                pLabel.ForeColor = Color.Black;
+                rLabel.ForeColor = Color.Black;
+                dLabel.ForeColor = Color.Black;
+            }
+            else // d
+            {
+                dLabel.ForeColor = Color.Cyan;
+
+                pLabel.ForeColor = Color.Black;
+                rLabel.ForeColor = Color.Black;
+                nLabel.ForeColor = Color.Black;
+            }
+        }
+
         private void voltageLabel_Click(object sender, EventArgs e)
         {
 
@@ -184,6 +233,55 @@ namespace BulletTrainGUI
         private void sysPowIndicator_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e)
         {
 
+        }
+
+        private void TrainGUI_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cameraButton_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e) // turns the cameras on and off
+        {
+            if (cameraButton.GetDTag("Position") == 0) //if button is OFF
+            {
+                cameraLabel.Text = "OFF";
+                pictureBox1.Hide();
+                pictureBox2.Hide();
+            }
+            else
+            {
+                cameraLabel.Text = "OON";
+                pictureBox1.Show();
+                pictureBox2.Show();
+            }
+            pictureBox1.Update();
+            pictureBox2.Update();
+        }
+
+        private void allDoorSwitch_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e)
+        {
+            if (allDoorSwitch.GetDTag("Position") == 0) // if all doors switch is turned OFF, turn all other switches off
+            {
+                doorSwitch1.SetDTag("Position", 0, true);
+                doorSwitch2.SetDTag("Position", 0, true);
+                doorSwitch3.SetDTag("Position", 0, true);
+                doorSwitch4.SetDTag("Position", 0, true);
+                doorSwitch5.SetDTag("Position", 0, true);
+            }
+            else if (allDoorSwitch.GetDTag("Position") == 1)
+            {
+                doorSwitch1.SetDTag("Position", 1, true);
+                doorSwitch2.SetDTag("Position", 1, true);
+                doorSwitch3.SetDTag("Position", 1, true);
+                doorSwitch4.SetDTag("Position", 1, true);
+                doorSwitch5.SetDTag("Position", 1, true);
+            }
+
+            doorSwitch1.Update();
+            doorSwitch2.Update();
+            doorSwitch3.Update();
+            doorSwitch4.Update();
+            doorSwitch5.Update();
         }
     }
 }

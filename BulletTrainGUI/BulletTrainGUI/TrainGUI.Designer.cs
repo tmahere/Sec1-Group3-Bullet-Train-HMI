@@ -82,14 +82,15 @@ namespace BulletTrainGUI
             this.doorSwitch4 = new AxGlgoleLib.AxGlg();
             this.doorSwitch3 = new AxGlgoleLib.AxGlg();
             this.doorSwitch2 = new AxGlgoleLib.AxGlg();
-            this.doorSwitch1 = new AxGlgoleLib.AxGlg();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.dLabel = new System.Windows.Forms.Label();
+            this.nLabel = new System.Windows.Forms.Label();
+            this.rLabel = new System.Windows.Forms.Label();
+            this.pLabel = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.allDoorSwitch = new AxGlgoleLib.AxGlg();
             this.allLightSwitch = new AxGlgoleLib.AxGlg();
+            this.colourCheck = new System.Windows.Forms.Timer(this.components);
+            this.doorSwitch1 = new AxGlgoleLib.AxGlg();
             ((System.ComponentModel.ISupportInitialize)(this.mapLocation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sysPowIndicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fireIndicator)).BeginInit();
@@ -117,10 +118,10 @@ namespace BulletTrainGUI
             ((System.ComponentModel.ISupportInitialize)(this.doorSwitch4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorSwitch3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorSwitch2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doorSwitch1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.allDoorSwitch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.allLightSwitch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorSwitch1)).BeginInit();
             this.SuspendLayout();
             // 
             // mapLocation
@@ -278,6 +279,7 @@ namespace BulletTrainGUI
             this.cameraButton.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("cameraButton.OcxState")));
             this.cameraButton.Size = new System.Drawing.Size(61, 56);
             this.cameraButton.TabIndex = 54;
+            this.cameraButton.Input += new AxGlgoleLib._DGlgEvents_InputEventHandler(this.cameraButton_Input);
             // 
             // pictureBox1
             // 
@@ -639,54 +641,46 @@ namespace BulletTrainGUI
             this.doorSwitch2.Size = new System.Drawing.Size(55, 27);
             this.doorSwitch2.TabIndex = 143;
             // 
-            // doorSwitch1
+            // dLabel
             // 
-            this.doorSwitch1.Enabled = true;
-            this.doorSwitch1.Location = new System.Drawing.Point(149, 306);
-            this.doorSwitch1.Name = "doorSwitch1";
-            this.doorSwitch1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("doorSwitch1.OcxState")));
-            this.doorSwitch1.Size = new System.Drawing.Size(55, 27);
-            this.doorSwitch1.TabIndex = 142;
+            this.dLabel.AutoSize = true;
+            this.dLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
+            this.dLabel.Location = new System.Drawing.Point(1312, 382);
+            this.dLabel.Name = "dLabel";
+            this.dLabel.Size = new System.Drawing.Size(31, 29);
+            this.dLabel.TabIndex = 147;
+            this.dLabel.Text = "D";
             // 
-            // label2
+            // nLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(1312, 382);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 29);
-            this.label2.TabIndex = 147;
-            this.label2.Text = "D";
+            this.nLabel.AutoSize = true;
+            this.nLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
+            this.nLabel.Location = new System.Drawing.Point(1312, 497);
+            this.nLabel.Name = "nLabel";
+            this.nLabel.Size = new System.Drawing.Size(32, 29);
+            this.nLabel.TabIndex = 148;
+            this.nLabel.Text = "N";
             // 
-            // label10
+            // rLabel
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(1312, 497);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(32, 29);
-            this.label10.TabIndex = 148;
-            this.label10.Text = "N";
+            this.rLabel.AutoSize = true;
+            this.rLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
+            this.rLabel.Location = new System.Drawing.Point(1312, 615);
+            this.rLabel.Name = "rLabel";
+            this.rLabel.Size = new System.Drawing.Size(31, 29);
+            this.rLabel.TabIndex = 149;
+            this.rLabel.Text = "R";
             // 
-            // label12
+            // pLabel
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(1312, 615);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(31, 29);
-            this.label12.TabIndex = 149;
-            this.label12.Text = "R";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
-            this.label14.Location = new System.Drawing.Point(1312, 729);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(30, 29);
-            this.label14.TabIndex = 150;
-            this.label14.Text = "P";
+            this.pLabel.AutoSize = true;
+            this.pLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
+            this.pLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.pLabel.Location = new System.Drawing.Point(1312, 729);
+            this.pLabel.Name = "pLabel";
+            this.pLabel.Size = new System.Drawing.Size(30, 29);
+            this.pLabel.TabIndex = 150;
+            this.pLabel.Text = "P";
             // 
             // panel4
             // 
@@ -707,6 +701,7 @@ namespace BulletTrainGUI
             this.allDoorSwitch.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("allDoorSwitch.OcxState")));
             this.allDoorSwitch.Size = new System.Drawing.Size(55, 27);
             this.allDoorSwitch.TabIndex = 152;
+            this.allDoorSwitch.Input += new AxGlgoleLib._DGlgEvents_InputEventHandler(this.allDoorSwitch_Input);
             // 
             // allLightSwitch
             // 
@@ -717,24 +712,37 @@ namespace BulletTrainGUI
             this.allLightSwitch.Size = new System.Drawing.Size(55, 27);
             this.allLightSwitch.TabIndex = 153;
             // 
+            // colourCheck
+            // 
+            this.colourCheck.Tick += new System.EventHandler(this.colourCheck_Tick);
+            // 
+            // doorSwitch1
+            // 
+            this.doorSwitch1.Enabled = true;
+            this.doorSwitch1.Location = new System.Drawing.Point(149, 308);
+            this.doorSwitch1.Name = "doorSwitch1";
+            this.doorSwitch1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("doorSwitch1.OcxState")));
+            this.doorSwitch1.Size = new System.Drawing.Size(55, 27);
+            this.doorSwitch1.TabIndex = 154;
+            // 
             // TrainGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1385, 874);
+            this.Controls.Add(this.doorSwitch1);
             this.Controls.Add(this.allLightSwitch);
             this.Controls.Add(this.allDoorSwitch);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pLabel);
+            this.Controls.Add(this.rLabel);
+            this.Controls.Add(this.nLabel);
+            this.Controls.Add(this.dLabel);
             this.Controls.Add(this.doorSwitch5);
             this.Controls.Add(this.doorSwitch4);
             this.Controls.Add(this.doorSwitch3);
             this.Controls.Add(this.doorSwitch2);
-            this.Controls.Add(this.doorSwitch1);
             this.Controls.Add(this.tempDec);
             this.Controls.Add(this.tempInc);
             this.Controls.Add(this.panel2);
@@ -779,6 +787,7 @@ namespace BulletTrainGUI
             this.Controls.Add(this.label26);
             this.Name = "TrainGUI";
             this.Text = "Bullet Train HMI";
+            this.Load += new System.EventHandler(this.TrainGUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mapLocation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sysPowIndicator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fireIndicator)).EndInit();
@@ -808,11 +817,11 @@ namespace BulletTrainGUI
             ((System.ComponentModel.ISupportInitialize)(this.doorSwitch4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorSwitch3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorSwitch2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doorSwitch1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.allDoorSwitch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.allLightSwitch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doorSwitch1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -870,14 +879,15 @@ namespace BulletTrainGUI
         private AxGlgoleLib.AxGlg doorSwitch4;
         private AxGlgoleLib.AxGlg doorSwitch3;
         private AxGlgoleLib.AxGlg doorSwitch2;
-        private AxGlgoleLib.AxGlg doorSwitch1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label dLabel;
+        private System.Windows.Forms.Label nLabel;
+        private System.Windows.Forms.Label rLabel;
+        private System.Windows.Forms.Label pLabel;
         private System.Windows.Forms.Panel panel4;
         private AxGlgoleLib.AxGlg allDoorSwitch;
         private AxGlgoleLib.AxGlg allLightSwitch;
+        private System.Windows.Forms.Timer colourCheck;
+        private AxGlgoleLib.AxGlg doorSwitch1;
     }
 }
 
