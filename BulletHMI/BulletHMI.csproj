@@ -5,4 +5,8 @@
     <TargetFramework>net472</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DrivingModule\DrivingModule.csproj" />
+  </ItemGroup>
+
 </Project>
