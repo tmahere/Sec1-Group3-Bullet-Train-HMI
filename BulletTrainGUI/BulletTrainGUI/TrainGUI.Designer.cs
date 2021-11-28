@@ -95,6 +95,7 @@ namespace BulletTrainGUI
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.systemStartup = new System.Windows.Forms.Timer(this.components);
+            this.locationTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mapLocation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sysPowIndicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fireIndicator)).BeginInit();
@@ -294,6 +295,7 @@ namespace BulletTrainGUI
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox1.Enabled = false;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(45, 78);
             this.pictureBox1.Name = "pictureBox1";
@@ -338,6 +340,7 @@ namespace BulletTrainGUI
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox2.Enabled = false;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(214, 78);
             this.pictureBox2.Name = "pictureBox2";
@@ -770,6 +773,11 @@ namespace BulletTrainGUI
             // 
             this.systemStartup.Tick += new System.EventHandler(this.systemStartup_Tick);
             // 
+            // locationTimer
+            // 
+            this.locationTimer.Interval = 120;
+            this.locationTimer.Tick += new System.EventHandler(this.locationTimer_Tick);
+            // 
             // TrainGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -943,6 +951,7 @@ namespace BulletTrainGUI
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Timer systemStartup;
+        private System.Windows.Forms.Timer locationTimer;
     }
 }
 

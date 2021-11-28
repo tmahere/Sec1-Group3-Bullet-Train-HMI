@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace ExternalMonitoring
+namespace BulletTrainHMI
 {
     public class Radio
     {
@@ -14,17 +14,17 @@ namespace ExternalMonitoring
 
         public Radio() // default constructor??
         {
-            radioFile = @"G:\Lisa\Documents\Bullet_Train_HMI\ExternalMonitoring\radioStatus.txt"; // change this later
+            radioFile = @"G:\Lisa\Documents\Bullet_Train_HMI\BulletTrainHMI\ExternalMonitoring\radioStatus.txt"; // change this later
             radioStatus = getRadioStatus();
         }
 
-        private bool getRadioStatus() // gets the radio's current status (ON/OFF)
+        public bool getRadioStatus() // gets the radio's current status (ON/OFF)
         {
             try
             {
                 using (StreamReader fp = new StreamReader(radioFile))
                 {
-                    bool radioFileData = fp.ReadLine();
+                    bool radioFileData = bool.Parse(fp.ReadLine());
                     return radioFileData;
                 }
             }
@@ -35,7 +35,7 @@ namespace ExternalMonitoring
             }
         }
 
-        private bool setRadioStatus(bool currentStatus, string radioFile) // changes the radio status to on or off depending on the current status and rewrites the file
+        public bool setRadioStatus(bool currentStatus) // changes the radio status to on or off depending on the current status and rewrites the file
         {
             try
             {

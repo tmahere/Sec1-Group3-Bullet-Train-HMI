@@ -8,34 +8,43 @@ using System.IO;
 // starts off with the train's current location, the UI module will increment the long and lat values when the train is moving
 // this module will just retrieve the starting and end positions of the tarin
 
-namespace ExternalMonitoring
+namespace BulletTrainHMI
 {
     public class GPS
     {
-        private string GPSFile;
+        private string longitudeFile;
+        private string latitudeFile;
         private string nextStationFile;
         private string nextStationLong;
         private string nextStationLat;
         private string longitude;
         private string latitude;
 
-        public TrainGPS() // default constructor
+        public GPS() // default constructor
         {
-            GPSFile = @"G:\Lisa\Documents\Bullet_Train_HMI\ExternalMonitoring\currentCoords.txt"; // change this later
-            nextStationFile = @"G:\Lisa\Documents\Bullet_Train_HMI\ExternalMonitoring\nextStationCoords.txt"; // change this later
+            longitudeFile = @"G:\Lisa\Documents\Bullet_Train_HMI\BulletTrainHMI\ExternalMonitoring\longitude.txt"; // change this later
+            latitudeFile = @"G:\Lisa\Documents\Bullet_Train_HMI\BulletTrainHMI\ExternalMonitoring\latitude.txt";
+            nextStationFile = @"G:\Lisa\Documents\Bullet_Train_HMI\BulletTrainHMI\ExternalMonitoring\nextStationCoords.txt"; // change this later
             longitude = getLongitude();
             latitude = getLatitude();
             nextStationLong = getNextStationLong();
-            nextStationLong = getNextStationLat();
+            nextStationLat = getNextStationLat();
         }
 
-        private string getLongitude()// changed from prototype
+        public string getLongitude()// changed from prototype
         {
             try
             {
-                using (StreamReader fp = new StreamReader(GPSFile))
+                using (StreamReader fp = new StreamReader(longitudeFile))
                 {
-                    String readLongitude = fp.ReadLine();
+                    String readLongitude;
+                    Random rnd = new Random();
+                    int lineIndex = rnd.Next(1, File.ReadLines(longitudeFile).Count());
+                    for (int i = 1; i < lineIndex; i++)
+                    {                                     
+                        fp.ReadLine();
+                    }
+                    readLongitude = fp.ReadLine();
                     fp.Close();
                     return readLongitude;
                 }
@@ -45,16 +54,23 @@ namespace ExternalMonitoring
                 Console.WriteLine("File not found.");
                 System.Environment.Exit(1);
             }
+            return "Cannot read Longitude";
         }
 
-        private string getLatitude()
+        public string getLatitude()
         {
             try
             {
-                using (StreamReader fp = new StreamReader(GPSFile))
+                using (StreamReader fp = new StreamReader(latitudeFile))
                 {
-                    fp.ReadLine(); // skip the first line (longitude)
-                    String readLatitude = fp.ReadLine();
+                    String readLatitude;
+                    Random rnd = new Random();
+                    int lineIndex = rnd.Next(1, File.ReadLines(latitudeFile).Count());
+                    for (int i = 1; i < lineIndex; i++)
+                    {
+                        fp.ReadLine();
+                    }
+                    readLatitude = fp.ReadLine();
                     fp.Close();
                     return readLatitude;
                 }
@@ -64,6 +80,7 @@ namespace ExternalMonitoring
                 Console.WriteLine("File not found.");
                 System.Environment.Exit(1);
             }
+            return "Cannot read Latitude";
         }
 
         private string getNextStationLong()
@@ -82,6 +99,7 @@ namespace ExternalMonitoring
                 Console.WriteLine("File not found.");
                 System.Environment.Exit(1);
             }
+            return "Cannot read Next Station Longitude";
         }
 
         private string getNextStationLat()
@@ -101,6 +119,7 @@ namespace ExternalMonitoring
                 Console.WriteLine("File not found.");
                 System.Environment.Exit(1);
             }
+            return "Cannot read Next Station Latitude";
         }
     }
 }

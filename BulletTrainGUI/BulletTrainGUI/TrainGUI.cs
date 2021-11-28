@@ -79,6 +79,18 @@ namespace BulletTrainGUI
                     sysPowIndicator.Update();
                 }
             }
+
+            BulletTrainHMI.Radio rad = new BulletTrainHMI.Radio();
+
+            radioLever.SetDTag("Position", Convert.ToInt32(rad.getRadioStatus()), true);
+            radioLever.Update();
+
+            if (radioLever.GetSResource("Action") == "ValueChanged")
+            {
+                rad.setRadioStatus(Convert.ToBoolean(radioLever.GetDTag("Position")));
+            }
+
+
             systemStartup.Stop();
         }
 
@@ -115,62 +127,21 @@ namespace BulletTrainGUI
             else
                 voltageLabel.ForeColor = Color.Lime;
 
-
-
-            //driveLever.SetDTag("Position", changeLabel(), true); // sets the driver lever to random movements
-            //driveLever.Update();
-
-            //radioLever.SetDTag("Position", radioStatus, true);
-            //label2.Text = "OFF";
-
-            //if (radioLever.GetDResource("Position") == 1)
-            //{
-            //    radioStatus = 1;
-            //    label2.Text = "OFF";
-            //}
-            //else if (radioLever.GetDResource("Position") == 0)
-            //{
-            //    radioStatus = 0;
-            //    label2.Text = "ON";
-            //}
-
-            //if (radioLever.GetSResource("Action") == "ValueChanged")
-            //{
-            //    if(radioLever.GetDTag("Position") == 1)
-            //    {
-            //        label2.Text = "OFF";
-            //        label2.Update();
-            //    }
-            //    else if(radioLever.GetDTag("Position") == 0)
-            //    {
-            //        label2.Text = "ON";
-            //        label2.Update();
-            //    }
-            //}
-
-
-
-            //radioLever.SetDResource("Position", 0);
-
-            // longitude
-            //longitudeLabel.Text = longitude; //data sent in shouold be string format
-
-            // latitude
-            //latitudeLabel.Text = latitude; //data sent in shouold be string format
-
-            // mapLocation
-            //mapLocation.SetDTag("Location", location, true);
-            //mapLocation.Update();
-
+            //////////////////////////
+            
             // speed meter
             //speedMeter.SetDTag("Speed", speed, true);
             //speedMeter.Update();
+
+
 
             // screen label - get it to center to panel1
             //screenLabel.Text = enterTextHere();
 
             // driving
 
+             //driveLever.SetDTag("Position", changeLabel(), true); // sets the driver lever to random movements
+            //driveLever.Update();
 
 
             // camera button - if off, have picture 1 and 2 off too (colour underneath is black, so set image to false??)
@@ -178,27 +149,6 @@ namespace BulletTrainGUI
             // pictureBox1
 
             // picturebox2
-
-
-            // lights
-            //lightSwitch1.SetDTag("Position", lightStatus1, true);
-            //lightSwitch2.SetDTag("Position", lightStatus2, true);
-            //lightSwitch3.SetDTag("Position", lightStatus3, true);
-            //lightSwitch4.SetDTag("Position", lightStatus4, true);
-            //lightSwitch5.SetDTag("Position", lightStatus5, true);
-
-            // doors
-            //cabin1Label.Text = 
-            //cabin2Label.Text = 
-            //cabin3Label.Text = 
-            //cabin4Label.Text = 
-            //cabin5Label.Text = 
-
-            //cabin1Button
-            //cabin2Button
-            //cabin3Button
-            //cabin4Button
-            //cabin5Button
 
             //fireIndicator
 
@@ -241,6 +191,15 @@ namespace BulletTrainGUI
                 rLabel.ForeColor = Color.Black;
                 nLabel.ForeColor = Color.Black;
             }
+
+            if (driveLever.GetDTag("Position") == 3) // if in drive mode, the location starts moving
+            {
+                locationTimer.Start();
+            }
+            else
+            {
+                locationTimer.Stop();
+            }
         }
 
         private void voltageLabel_Click(object sender, EventArgs e)
@@ -278,14 +237,14 @@ namespace BulletTrainGUI
             if (cameraButton.GetDTag("Position") == 0) //if button is OFF
             {
                 cameraLabel.Text = "OFF";
-                pictureBox1.Hide();
-                pictureBox2.Hide();
+                pictureBox1.Enabled = false;
+                pictureBox2.Enabled = false;
             }
             else
             {
                 cameraLabel.Text = "ON";
-                pictureBox1.Show();
-                pictureBox2.Show();
+                pictureBox1.Enabled = true;
+                pictureBox2.Enabled = true;
             }
             pictureBox1.Update();
             pictureBox2.Update();
@@ -343,5 +302,19 @@ namespace BulletTrainGUI
             lightSwitch5.Update();
         }
 
+        private void locationTimer_Tick(object sender, EventArgs e)
+        {
+            BulletTrainHMI.GPS gps = new BulletTrainHMI.GPS();
+
+            // longitude
+            longitudeLabel.Text = gps.getLongitude(); //data sent in shouold be string format
+
+            // latitude
+            latitudeLabel.Text = gps.getLatitude(); //data sent in shouold be string format
+
+            // mapLocation
+            //mapLocation.SetDTag("Location", location, true);
+            //mapLocation.Update();
+        }
     }
 }
