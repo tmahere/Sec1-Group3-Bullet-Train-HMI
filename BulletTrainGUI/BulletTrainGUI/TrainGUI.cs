@@ -12,6 +12,7 @@ using GenLogic;
 using System.Windows.Forms;
 
 using BulletTrainHMI;
+using DrivingModule;
 
 // don't change any of the method names because the form WILL break
 // to change it you must change the widget's name in properties FIRST then the method name
@@ -43,43 +44,55 @@ namespace BulletTrainGUI
     public partial class TrainGUI : Form
     {
         float temperature;
-        public TrainGUI()
+        int a, s;
+        public TrainGUI() // startup and initializing
         {
             InitializeComponent();
-            systemStartup.Start();
-            loopTimer.Interval = 500;
-            loopTimer.Start();
-            colourCheck.Start();
+            location();
+            startupTimer.Start();
         }
-
-        private void systemStartup_Tick(object sender, EventArgs e)
+        private void startup()
         {
             internalMon();
 
             string path = @"G:\Lisa\Documents\Bullet_Train_HMI\BulletTrainHMI\power sequence.txt";
-            int lines = File.ReadLines(path).Count();
+            string[] power = File.ReadAllLines(path);
 
-            StreamReader FILE = new StreamReader(path);
+
             // system power meter
-            for (int i = 0; i < lines; i++)
+            sysPowLabel.Text = power[a] + "%";
+            sysPowGauge.SetDTag("Power", float.Parse(power[a]), true);
+            sysPowGauge.Update();
+
+            if (sysPowGauge.GetDTag("Power") == 100.00) // if the number reaches 100 then the button turns on
             {
-                string power = FILE.ReadLine();
-                sysPowLabel.Text = power;
-                sysPowGauge.SetDTag("Power", float.Parse(power), true);
-                sysPowGauge.Update();
-
-                if (float.Parse(power) == 100) // if the number reaches 100 then the button turns on
-                {
-                    sysPowIndicator.SetDTag("Position", 1, true);
-                    sysPowIndicator.Update();
-                }
-                else
-                {
-                    sysPowIndicator.SetDTag("Position", 0, true);
-                    sysPowIndicator.Update();
-                }
+                sysPowIndicator.SetDTag("Position", 1, true);
+                sysPowIndicator.Update();
             }
+            else
+            {
+                sysPowIndicator.SetDTag("Position", 0, true);
+                sysPowIndicator.Update();
+            }
+            a++;
+        }
 
+        private void startupTimer_Tick(object sender, EventArgs e)
+        {
+            startup();
+
+            if(sysPowGauge.GetDTag("Power") == 100.00)
+            {
+                startupTimer.Stop();
+                radioWatch.Start();
+                loopTimer.Interval = 500;
+                loopTimer.Start();
+                colourCheck.Start();
+
+            }
+        }
+        private void radioWatch_Tick(object sender, EventArgs e)
+        {
             BulletTrainHMI.Radio rad = new BulletTrainHMI.Radio();
 
             radioLever.SetDTag("Position", Convert.ToInt32(rad.getRadioStatus()), true);
@@ -89,9 +102,6 @@ namespace BulletTrainGUI
             {
                 rad.setRadioStatus(Convert.ToBoolean(radioLever.GetDTag("Position")));
             }
-
-
-            systemStartup.Stop();
         }
 
         // move some items to separate timers depending on their rate of change, OR into a separate method if it takes in user input
@@ -127,30 +137,17 @@ namespace BulletTrainGUI
             else
                 voltageLabel.ForeColor = Color.Lime;
 
-                //////////////////////////
+            //////////////////////////
 
-                // speed meter
-                //speedMeter.SetDTag("Speed", speed, true);
-                //speedMeter.Update();
+            // speed meter
+            //speedMeter.SetDTag("Speed", , true);
+            //speedMeter.Update();
 
+            // screen label - get it to center to panel1
+            //screenLabel.Text = enterTextHere();
 
-
-                // screen label - get it to center to panel1
-                //screenLabel.Text = enterTextHere();
-
-                // driving
-
-                //driveLever.SetDTag("Position", changeLabel(), true); // sets the driver lever to random movements
-                //driveLever.Update();
-
-
-                // camera button - if off, have picture 1 and 2 off too (colour underneath is black, so set image to false??)
-
-                // pictureBox1
-
-                // picturebox2
-
-                //fireIndicator
+            //fireIndicator
+            
             }
 
         private void colourCheck_Tick(object sender, EventArgs e) // changes the colour of the drive lever labels
@@ -191,15 +188,21 @@ namespace BulletTrainGUI
             if (driveLever.GetDTag("Position") == 3) // if in drive mode, the location starts moving
             {
                 locationTimer.Start();
+                if (s != 124)
+                    speedTimer.Start();
+            }
+            else if(driveLever.GetDTag("Position") == 2)
+            {
+                locationTimer.Start();
+                speedTimer.Stop();
             }
             else
             {
                 locationTimer.Stop();
+                speedTimer.Stop();
             }
 
             //////
-            
-            BulletTrainHMI.TempManager temp = new BulletTrainHMI.TempManager(@"G:\Lisa\Documents\Bullet_Train_HMI\BulletTrainHMI\tempData.txt"); // temperature increase and decrease
 
             if (tempInc.GetDTag("Pressed") == 1)
             {
@@ -305,6 +308,11 @@ namespace BulletTrainGUI
 
         private void locationTimer_Tick(object sender, EventArgs e)
         {
+            location();
+        }
+
+        private void location()
+        {
             BulletTrainHMI.GPS gps = new BulletTrainHMI.GPS();
 
             // longitude
@@ -314,6 +322,20 @@ namespace BulletTrainGUI
             latitudeLabel.Text = gps.getLatitude(); //data sent in shouold be string format
         }
 
+
         private void tempInc_Input(object sender, AxGlgoleLib._DGlgEvents_InputEvent e){}
+
+        private void speedTimer_Tick(object sender, EventArgs e)
+        {
+            string path = @"G:\Lisa\Documents\Bullet_Train_HMI\BulletTrainHMI\speedChanges.txt";
+            string[] speed = File.ReadAllLines(path);
+
+            speedMeter.SetDTag("Speed", float.Parse(speed[s]), true);
+            speedMeter.Update();
+            s++;
+            if (s == 124)
+                speedTimer.Stop();
+
+        }
     }
 }

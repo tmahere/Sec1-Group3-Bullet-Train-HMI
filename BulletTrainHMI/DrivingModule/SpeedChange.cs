@@ -25,7 +25,7 @@ namespace DrivingModule
 
         private void ChangeSpeed(float currentSpeed, bool direction)
         {
-            Brake train = new();
+            Brake train = new Brake();
 
             for (int i = 0; i < speedChanges.Length; i++)
             {

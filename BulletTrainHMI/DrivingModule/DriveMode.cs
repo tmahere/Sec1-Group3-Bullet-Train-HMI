@@ -24,7 +24,7 @@ namespace DrivingModule
              string entireLine;
              int lineLength;
              float currentSpeed;
-             SpeedChange train = new();
+             SpeedChange train = new SpeedChange();
 
              currentSpeed = train.GetCurrentSpeed();
             if (currentSpeed == 0)

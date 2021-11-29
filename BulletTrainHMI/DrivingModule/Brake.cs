@@ -25,7 +25,7 @@ namespace DrivingModule
         {
           
             float currentSpeed;
-            SpeedChange train = new();
+            SpeedChange train = new SpeedChange();
             currentSpeed = train.GetCurrentSpeed();
          
             while (currentSpeed != 0.0f)
@@ -44,7 +44,7 @@ namespace DrivingModule
         protected internal void StoreBrakeSlow()
         {
 
-            SpeedChange train = new();
+            SpeedChange train = new SpeedChange();
 
             float[] checkChange = train.GetSpeedChange();
 

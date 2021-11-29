@@ -94,8 +94,10 @@ namespace BulletTrainGUI
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.systemStartup = new System.Windows.Forms.Timer(this.components);
+            this.radioWatch = new System.Windows.Forms.Timer(this.components);
             this.locationTimer = new System.Windows.Forms.Timer(this.components);
+            this.startupTimer = new System.Windows.Forms.Timer(this.components);
+            this.speedTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mapLocation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sysPowIndicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fireIndicator)).BeginInit();
@@ -155,7 +157,7 @@ namespace BulletTrainGUI
             this.voltageLabel.Name = "voltageLabel";
             this.voltageLabel.Size = new System.Drawing.Size(86, 26);
             this.voltageLabel.TabIndex = 17;
-            this.voltageLabel.Text = "30.0 kV";
+            this.voltageLabel.Text = "00.0 kV";
             this.voltageLabel.Click += new System.EventHandler(this.voltageLabel_Click);
             // 
             // currentLabel
@@ -168,7 +170,7 @@ namespace BulletTrainGUI
             this.currentLabel.Name = "currentLabel";
             this.currentLabel.Size = new System.Drawing.Size(87, 26);
             this.currentLabel.TabIndex = 18;
-            this.currentLabel.Text = "40.1 Hz";
+            this.currentLabel.Text = "00.0 Hz";
             this.currentLabel.Click += new System.EventHandler(this.currentLabel_Click);
             // 
             // sysPowIndicator
@@ -196,7 +198,7 @@ namespace BulletTrainGUI
             this.sysPowLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.sysPowLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.sysPowLabel.ForeColor = System.Drawing.Color.Lime;
-            this.sysPowLabel.Location = new System.Drawing.Point(8, 1);
+            this.sysPowLabel.Location = new System.Drawing.Point(3, 1);
             this.sysPowLabel.Name = "sysPowLabel";
             this.sysPowLabel.Size = new System.Drawing.Size(44, 26);
             this.sysPowLabel.TabIndex = 28;
@@ -745,9 +747,9 @@ namespace BulletTrainGUI
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.sysPowLabel);
-            this.panel3.Location = new System.Drawing.Point(852, 264);
+            this.panel3.Location = new System.Drawing.Point(840, 264);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(83, 32);
+            this.panel3.Size = new System.Drawing.Size(108, 32);
             this.panel3.TabIndex = 155;
             // 
             // panel5
@@ -770,14 +772,23 @@ namespace BulletTrainGUI
             this.panel6.Size = new System.Drawing.Size(131, 32);
             this.panel6.TabIndex = 157;
             // 
-            // systemStartup
+            // radioWatch
             // 
-            this.systemStartup.Tick += new System.EventHandler(this.systemStartup_Tick);
+            this.radioWatch.Tick += new System.EventHandler(this.radioWatch_Tick);
             // 
             // locationTimer
             // 
             this.locationTimer.Interval = 120;
             this.locationTimer.Tick += new System.EventHandler(this.locationTimer_Tick);
+            // 
+            // startupTimer
+            // 
+            this.startupTimer.Interval = 5;
+            this.startupTimer.Tick += new System.EventHandler(this.startupTimer_Tick);
+            // 
+            // speedTimer
+            // 
+            this.speedTimer.Tick += new System.EventHandler(this.speedTimer_Tick);
             // 
             // TrainGUI
             // 
@@ -951,8 +962,10 @@ namespace BulletTrainGUI
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Timer systemStartup;
+        private System.Windows.Forms.Timer radioWatch;
         private System.Windows.Forms.Timer locationTimer;
+        private System.Windows.Forms.Timer startupTimer;
+        private System.Windows.Forms.Timer speedTimer;
     }
 }
 
