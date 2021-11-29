@@ -98,6 +98,19 @@ namespace BulletTrainGUI
             this.locationTimer = new System.Windows.Forms.Timer(this.components);
             this.startupTimer = new System.Windows.Forms.Timer(this.components);
             this.speedTimer = new System.Windows.Forms.Timer(this.components);
+            this.startDemo = new AxGlgoleLib.AxGlg();
+            this.demoTimer = new System.Windows.Forms.Timer(this.components);
+            this.screenTimer = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mapLocation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sysPowIndicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fireIndicator)).BeginInit();
@@ -132,6 +145,7 @@ namespace BulletTrainGUI
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.startDemo)).BeginInit();
             this.SuspendLayout();
             // 
             // mapLocation
@@ -790,12 +804,141 @@ namespace BulletTrainGUI
             // 
             this.speedTimer.Tick += new System.EventHandler(this.speedTimer_Tick);
             // 
+            // startDemo
+            // 
+            this.startDemo.Enabled = true;
+            this.startDemo.Location = new System.Drawing.Point(797, 818);
+            this.startDemo.Name = "startDemo";
+            this.startDemo.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("startDemo.OcxState")));
+            this.startDemo.Size = new System.Drawing.Size(92, 44);
+            this.startDemo.TabIndex = 158;
+            // 
+            // demoTimer
+            // 
+            this.demoTimer.Tick += new System.EventHandler(this.demoTimer_Tick);
+            // 
+            // screenTimer
+            // 
+            this.screenTimer.Interval = 1000;
+            this.screenTimer.Tick += new System.EventHandler(this.screenTimer_Tick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(838, 298);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 18);
+            this.label2.TabIndex = 159;
+            this.label2.Text = "System Power";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(1068, 300);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 18);
+            this.label7.TabIndex = 160;
+            this.label7.Text = "Voltage";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(1262, 298);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(64, 18);
+            this.label8.TabIndex = 161;
+            this.label8.Text = "Current";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(457, 56);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(103, 18);
+            this.label10.TabIndex = 162;
+            this.label10.Text = "Temperature";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(587, 497);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(52, 18);
+            this.label12.TabIndex = 163;
+            this.label12.Text = "Radio";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label14.Location = new System.Drawing.Point(1307, 411);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(42, 18);
+            this.label14.TabIndex = 164;
+            this.label14.Text = "Drive";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label16.Location = new System.Drawing.Point(1303, 526);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(55, 18);
+            this.label16.TabIndex = 165;
+            this.label16.Text = "Neutral";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label18.Location = new System.Drawing.Point(1297, 644);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(63, 18);
+            this.label18.TabIndex = 166;
+            this.label18.Text = "Reverse";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label20.Location = new System.Drawing.Point(1309, 758);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(39, 18);
+            this.label20.TabIndex = 167;
+            this.label20.Text = "Park";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(969, 494);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(55, 18);
+            this.label22.TabIndex = 168;
+            this.label22.Text = "Speed";
+            // 
             // TrainGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1385, 874);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.startDemo);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
@@ -893,6 +1036,7 @@ namespace BulletTrainGUI
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.startDemo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -966,6 +1110,19 @@ namespace BulletTrainGUI
         private System.Windows.Forms.Timer locationTimer;
         private System.Windows.Forms.Timer startupTimer;
         private System.Windows.Forms.Timer speedTimer;
+        private AxGlgoleLib.AxGlg startDemo;
+        private System.Windows.Forms.Timer demoTimer;
+        private System.Windows.Forms.Timer screenTimer;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label22;
     }
 }
 

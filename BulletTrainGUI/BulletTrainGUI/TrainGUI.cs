@@ -49,8 +49,35 @@ namespace BulletTrainGUI
         {
             InitializeComponent();
             location();
-            startupTimer.Start();
+            demoTimer.Start();
         }
+
+        private void demoTimer_Tick(object sender, EventArgs e)
+        {
+            if (startDemo.GetDTag("Position") == 0) // off
+            {
+                startupTimer.Stop();
+                loopTimer.Stop();
+                colourCheck.Stop();
+                locationTimer.Stop();
+                speedTimer.Stop();
+                screenTimer.Stop();
+            }
+            else if (startDemo.GetDTag("Position") == 1)
+            {
+                if (!(sysPowGauge.GetDTag("Power") == 100.00))
+                {
+                    startupTimer.Start();
+                }
+                else if(sysPowGauge.GetDTag("Power") == 100.00)
+                {
+                    loopTimer.Start();
+                    colourCheck.Start();
+                    screenTimer.Start();
+                }
+            }
+        }
+
         private void startup()
         {
             internalMon();
@@ -84,11 +111,11 @@ namespace BulletTrainGUI
             if(sysPowGauge.GetDTag("Power") == 100.00)
             {
                 startupTimer.Stop();
-                radioWatch.Start();
+                //radioWatch.Start();
                 loopTimer.Interval = 500;
                 loopTimer.Start();
                 colourCheck.Start();
-
+                screenTimer.Start();
             }
         }
         private void radioWatch_Tick(object sender, EventArgs e)
@@ -130,7 +157,7 @@ namespace BulletTrainGUI
             voltageMeter.SetDTag("Voltage", voltage, true);
             voltageMeter.Update();
 
-            if (voltage > 52)
+            if (voltage > 27)
             {
                 voltageLabel.ForeColor = Color.Red;
             }
@@ -187,19 +214,23 @@ namespace BulletTrainGUI
 
             if (driveLever.GetDTag("Position") == 3) // if in drive mode, the location starts moving
             {
+               // s = Convert.ToInt32(speedMeter.GetDTag("Speed"));
                 locationTimer.Start();
                 if (s != 124)
                     speedTimer.Start();
             }
-            else if(driveLever.GetDTag("Position") == 2)
+            else if(driveLever.GetDTag("Position") == 2 || driveLever.GetDTag("Position") == 1)
             {
                 locationTimer.Start();
                 speedTimer.Stop();
             }
-            else
+            else if(driveLever.GetDTag("Position") == 0)
             {
-                locationTimer.Stop();
-                speedTimer.Stop();
+                decreaseSpeed(speedMeter.GetDTag("Speed"));
+                if(speedMeter.GetDTag("Speed") == 0)
+                {
+                    locationTimer.Stop();
+                }
             }
 
             //////
@@ -214,6 +245,36 @@ namespace BulletTrainGUI
                 currentTemp.Text = (temperature - 1).ToString() + "°C";
                 temperature--;
             }
+        }
+
+        private void decreaseSpeed(double current)
+        {
+            if(current != 0)
+            {
+                speedMeter.SetDTag("Speed", current - 1, true);
+                speedMeter.Update();
+            }
+        }
+        private void screenTimer_Tick(object sender, EventArgs e)
+        {
+            string[] notices = { "", "", "", "Brake pressure: ", "", "", "" };
+            Random r = new Random();
+
+            int rand = r.Next(0, 6);
+            if (rand == 3)
+            {
+                int ra = r.Next(0, 100);
+                screenLabel.Text = notices[rand] + ra.ToString();
+
+                if (ra > 20 && ra < 35)
+                {
+                    screenLabel.Text = "Acceptable";
+                }
+                else
+                    screenLabel.Text = "Check Brake";
+            }
+            else
+                screenLabel.Text = notices[rand];
         }
 
         private void voltageLabel_Click(object sender, EventArgs e) {}
@@ -335,7 +396,6 @@ namespace BulletTrainGUI
             s++;
             if (s == 124)
                 speedTimer.Stop();
-
         }
     }
 }
